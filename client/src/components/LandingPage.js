@@ -3,8 +3,6 @@ import logo from "../logo.svg";
 import "./App.css";
 
 class LandingPage extends React.Component {
-
-
   render() {
     return (
       <div className="App">
@@ -29,7 +27,6 @@ class LandingPage extends React.Component {
             <span>you want to book an appointment with.</span>
           </div>
         </header>
-        <div>{this.renderDoctors()}</div>
         <ul>
           <li>
             <i className="material-icons">home</i>
