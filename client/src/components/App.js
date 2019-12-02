@@ -6,6 +6,7 @@ import SignUpPage from "./SignUpPage";
 import DoctorList from './DoctorList';
 import DoctorDetails from "./DoctorDetails";
 import BookingPage from "./BookingPage";
+import BookedList from "./BookedList";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 
@@ -20,7 +21,7 @@ class App extends React.Component {
           <Route path='/doctorlist' exact component={DoctorList} />
           <Route path='/doctorDetails' component={DoctorDetails} />
           <Route path='/bookingPage' component={BookingPage} />
-
+          <Route path='/bookedList' component={BookedList} />
         </Switch>
       </Router>
     );
