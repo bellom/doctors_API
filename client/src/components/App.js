@@ -3,7 +3,7 @@ import "./App.css";
 import LandingPage from './LandingPage';
 import LoginPage from './LoginPage';
 import SignUpPage from "./SignUpPage";
-import DoctorList from './DoctorList';
+import DoctorList from '../container/DoctorList';
 import DoctorDetails from "./DoctorDetails";
 import BookingPage from "./BookingPage";
 import BookedList from "./BookedList";
