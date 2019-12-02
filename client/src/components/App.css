@@ -1,0 +1,95 @@
+/* ******************************
+LandingPage.js
+****************************** */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 9vmin;
+}
+
+.App-body {
+  align-items: center;
+  background-color: white;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 58vh;
+  padding-bottom: 15.3vh;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.headTitle {
+  background-color: turquoise;
+  color: #09d3ac;
+  font-weight: bold;
+  font-size: 25px;
+  min-height: 10vh;
+  padding: 40px 45px 0px;
+  text-align: left;
+}
+
+.input {
+  background-color: white;
+  border-radius: 70px;
+  height: 5vh;
+  width: 82vw;
+}
+
+.body {
+  margin-bottom: 200px;
+}
+
+.bodyTitle {
+  text-transform: uppercase;
+  color: black;
+}
+
+span {
+  color: black;
+  font-size: 15px;
+}
+
+ul {
+  background-color: white;
+  list-style-type: none;
+  display: flex;
+  height: 40px;
+  margin-top: 3px;
+}
+
+ul li {
+  margin-right: 110px;
+  justify-content: center;
+  padding-top: 9px;
+}
+
+
+/* ******************************
+DoctorList.js
+****************************** */
+.settings {
+  background-color: darkgreen;
+}
+
+.doctor {
+  border: 1px solid grey;
+  color: black;
+}
+
+/* ******************************
+DoctorDetails.js
+****************************** */
+
+/* ******************************
+LoginPage.js
+****************************** */
+
+/* ******************************
+SignUpPage.js
+****************************** */
