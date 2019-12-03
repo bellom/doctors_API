@@ -16,7 +16,7 @@ class LandingPage extends React.Component {
               type="text"
               className="input"
               placeholder="Search for doctors"
-            />
+            />cd 
             <br />
             <br />
             <img src={logo} className="App-logo" alt="logo" />

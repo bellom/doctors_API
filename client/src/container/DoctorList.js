@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "../components/App.css";
 
 class DoctorList extends React.Component {
   
@@ -16,7 +16,7 @@ class DoctorList extends React.Component {
 
   renderDoctors() {
     return this.state.doctors.map(doctor => (
-      <div key={doctor.id}>
+      <div key={doctor.id} className='doctorlist'>
         <h2>{doctor.name}</h2>
         <h3>{doctor.education}</h3>
         <h4>{doctor.speciality}</h4>
@@ -30,13 +30,13 @@ class DoctorList extends React.Component {
       <div className="headTitle">
         <span>&#60;</span> Doctors <span>&#x25bc;</span>
       </div>
-      <header className="App-boy">
+      <header className="App-bdy">
         <div className="body">
           <i className="material-icons input settings">settings_application</i>
         </div>
         <div>
           <h3>List of Doctors from search</h3>
-          <h4>Filter bY Name: <input type='text'/></h4>
+          <h4>Filter By Name: <input type='text'/></h4>
           <div className="doctor">
             <div>{this.renderDoctors()}</div>
           </div>

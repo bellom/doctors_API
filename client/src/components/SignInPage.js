@@ -16,6 +16,7 @@ const LoginPage = () => {
       </div>
       <div className="body">
         <input type="text" className="input" placeholder="username" />
+        <button>SignIn</button>
         <div>
           <Link to='/signup'>
             Sign Up

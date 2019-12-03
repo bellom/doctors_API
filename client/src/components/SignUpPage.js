@@ -10,13 +10,13 @@ const SignUpPage = () => {
         <img src={logo} className="App-logo" alt="logo" />
         <h3>doctor's meetup</h3>
         <h4>Sign Up to continue</h4>
-        <h5>Already a user ? <Link to='/login'> SignIn</Link></h5>
+        <h5>Already a user ? <Link to='/signin'> SignIn</Link></h5>
       </div>
       <form>
         <input type="text" className="input" placeholder="username" />
         <button>Create User</button>
       </form>
-
+ 
       <div>
         By continuing you agree to <a href="/">Terms & Conditions</a>
       </div>

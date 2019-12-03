@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import LandingPage from './LandingPage';
-import LoginPage from './LoginPage';
+import SignInPage from './SignInPage';
 import SignUpPage from "./SignUpPage";
 import DoctorList from '../container/DoctorList';
 import DoctorDetails from "./DoctorDetails";
@@ -15,8 +15,9 @@ class App extends React.Component {
     return (
       <Router>
         <Switch>
-          <Route path='/' exact component={LandingPage} />
-          <Route path='/login' component={LoginPage} />
+          <Route path='/' exact component={SignInPage} />
+          <Route path='/home' exact component={LandingPage} />
+          <Route path='/signin' component={SignInPage} />
           <Route path='/signup' component={SignUpPage} />
           <Route path='/doctorlist' exact component={DoctorList} />
           <Route path='/doctorDetails' component={DoctorDetails} />

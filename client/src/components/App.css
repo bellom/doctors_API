@@ -1,5 +1,5 @@
 /* ******************************
-LandingPage.js
+General Styles
 ****************************** */
 .App {
   text-align: center;
@@ -8,6 +8,12 @@ LandingPage.js
 .App-logo {
   height: 9vmin;
 }
+
+
+/* ******************************
+LandingPage.js
+****************************** */
+
 
 .App-body {
   align-items: center;
@@ -25,10 +31,9 @@ LandingPage.js
 }
 
 .headTitle {
-  background-color: turquoise;
-  color: #09d3ac;
-  font-weight: bold;
-  font-size: 25px;
+  background-color: rgb(224, 253, 247);
+  color: #009688;
+  font-size: 26px;
   min-height: 10vh;
   padding: 40px 45px 0px;
   text-align: left;
@@ -41,9 +46,9 @@ LandingPage.js
   width: 82vw;
 }
 
-.body {
+/* .body {
   margin-bottom: 200px;
-}
+} */
 
 .bodyTitle {
   text-transform: uppercase;
@@ -78,6 +83,11 @@ DoctorList.js
 }
 
 .doctor {
+  border: 1px solid grey;
+  color: black;
+}
+
+.doctorlist {
   border: 1px solid grey;
   color: black;
 }
