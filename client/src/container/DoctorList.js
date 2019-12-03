@@ -8,7 +8,7 @@ class DoctorList extends React.Component {
   };
 
   componentDidMount() {
-    fetch("/api/doctors")
+    fetch('/api/doctors')
       .then(response => response.json())
       .then(json => this.setState({ doctors: json }))
       .catch(error => console.log(error));

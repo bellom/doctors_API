@@ -9,6 +9,10 @@ General Styles
   height: 9vmin;
 }
 
+.setBorder {
+  border: 1px solid grey;
+  color: black;
+}
 
 /* ******************************
 LandingPage.js
