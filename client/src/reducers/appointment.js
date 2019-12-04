@@ -4,7 +4,7 @@ const appointment = (state = [], action) => {
       return action.appointment;
 
     case 'FETCH_APPOINTMENT':
-      return action.appointment
+      return action.appointment;
 
     default:
       return state;
