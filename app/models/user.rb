@@ -3,5 +3,6 @@ class User < ApplicationRecord
   has_many :doctors, through: :appointments
 
 
-  validate_presence_of :username
+  validates_presence_of :username
 end
+

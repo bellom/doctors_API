@@ -1,9 +1,9 @@
 class Doctor < ApplicationRecord
   has_many :appointments
-  has_many :user through: :appointments
+  has_many :users, through: :appointments
 
 
-  validate_presence_of :name
-  validate_presence_of :education
-  validate_presence_of :speciality
+  validates_presence_of :name
+  validates_presence_of :education
+  validates_presence_of :speciality
 end

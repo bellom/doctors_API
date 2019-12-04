@@ -1,5 +1,8 @@
 import React from "react";
 import "../components/App.css";
+// import { connect } from "react-redux";
+// import { thunk_action_creator } from "../actions/fetchAction";
+
 
 class BookedList extends React.Component {
 
@@ -16,7 +19,7 @@ class BookedList extends React.Component {
 
   renderAppointments() {
     return this.state.appointments.map(appointment => (
-      <div>
+      <div className='setBorder'>
         <h2>Time:{appointment.date}</h2>
         <h4>Doctor To Meet:{appointment.doctor_name}</h4>
         <h4>Patient: {appointment.user_name}</h4>
@@ -39,4 +42,11 @@ class BookedList extends React.Component {
   }
 };
 
-export default BookedList;
+// const mapStateToProps = state => {
+//   return {
+//     data: state
+//   };
+// };
+
+// export default connect(mapStateToProps)(BookedList);
+export default BookedList
