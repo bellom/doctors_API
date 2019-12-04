@@ -1,8 +1,9 @@
 import store from "../store";
 
-export const createUser = () => {
+export const createUser = user => {
   return {
-    type: "CREATE_USER"
+    type: "CREATE_USER",
+    user,
   };
 };
 
