@@ -23,7 +23,7 @@ export const createAppointment = appointment => {
 
 export const fetchAppointment = appointment => {
   return {
-    type: "FETCH_DOCTOR",
+    type: "FETCH_APPOINTMENT",
     data: appointment
   };
 };
