@@ -2,8 +2,20 @@ import React from "react";
 import logo from "../logo.svg";
 import "./App.css";
 import { Link } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
+
 
 const LoginPage = () => {
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('clicked')
+    if(e.handleSubmit) {
+      return <Redirect to="/home" />;
+    }
+  }
+  
+
   return (
     <div className="App App-login">
       <div>
@@ -15,8 +27,12 @@ const LoginPage = () => {
         <span>Sign in to continue</span>
       </div>
       <div className="body">
-        <input type="text" className="input" placeholder="username" />
-        <button>SignIn</button>
+        <form onSubmit={e => handleSubmit(e)}>
+          <input type="text" className="input" placeholder="username" />
+          <button>
+            <Link to='/home'>SignIn</Link>            
+          </button>
+        </form>
         <div>
           <Link to='/signup'>
             Sign Up

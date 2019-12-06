@@ -14,9 +14,10 @@ const SignUpPage = () => {
       </div>
       <form>
         <input type="text" className="input" placeholder="username" />
-        <button>Create User</button>
+        <button>
+            <Link to='/home'>Create User</Link>            
+        </button>      
       </form>
- 
       <div>
         By continuing you agree to <a href="/">Terms & Conditions</a>
       </div>

@@ -7,10 +7,10 @@ export const createUser = user => {
   };
 };
 
-export const fetchDcotor = doctor => {
+export const fetchDoctor = doctor => {
   return {
     type: "FETCH_DOCTOR",
-    data: doctor,
+    doctor,
   };
 };
 
@@ -24,7 +24,7 @@ export const createAppointment = appointment => {
 export const fetchAppointment = appointment => {
   return {
     type: "FETCH_APPOINTMENT",
-    data: appointment
+    appointment
   };
 };
 

@@ -26,7 +26,7 @@ LandingPage.js
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 58vh;
+  height: 38vh;
   padding-bottom: 15.3vh;
 }
 
@@ -59,6 +59,23 @@ LandingPage.js
   color: black;
 }
 
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.cat:hover{
+  background-color: #09d3ac;
+}
+
+.cat {
+  width: 30%;
+  background-color: rgb(224, 253, 247);
+  height: 15vh;
+  border: 1px solid grey;
+  margin-right: 5px;
+}
+
 span {
   color: black;
   font-size: 15px;
@@ -68,12 +85,12 @@ ul {
   background-color: white;
   list-style-type: none;
   display: flex;
-  height: 40px;
-  margin-top: 3px;
+  height: 35px;
+  margin-top: 60px;
 }
 
 ul li {
-  margin-right: 110px;
+  margin-right: 100px;
   justify-content: center;
   padding-top: 9px;
 }

@@ -1,7 +1,7 @@
 const doctor = (state = [], action) => {
   switch (action.type) {
     case 'FETCH_DOCTOR':
-      return action.doctor;
+      return action.doctors;
 
     default:
       return state;
