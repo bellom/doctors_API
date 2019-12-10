@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import LandingPage from './LandingPage';
-import SignInPage from './SignInPage';
+import SignInPage from '../container/SignInPage';
 import SignUpPage from "./SignUpPage";
 import DoctorList from '../container/DoctorList';
 import DoctorDetails from "./DoctorDetails";
