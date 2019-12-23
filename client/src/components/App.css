@@ -113,6 +113,10 @@ DoctorList.js
   color: black;
 }
 
+.hideDetails {
+  display: none;
+}
+
 /* ******************************
 DoctorDetails.js
 ****************************** */

@@ -12,7 +12,8 @@ const mapDispatchToProps = dispatch => ({
 class DoctorList extends React.Component {
   
   state = {
-    doctors: []
+    doctors: [],
+    on: false
   };
 
   handleClick = e => {
@@ -20,6 +21,13 @@ class DoctorList extends React.Component {
     this.props.history.push('/bookingPage');
   }
 
+  handleChange = e => {
+    e.preventDefault()
+    this.setState({
+      on: !this.state.on
+    })
+    
+  }
   componentDidMount() {
     fetch('/api/doctors')
       .then(response => response.json())
@@ -35,10 +43,12 @@ class DoctorList extends React.Component {
   renderDoctors() {
     return this.state.doctors.map(doctor => (
       <div key={doctor.id} className='doctorlist'>
-        <h2>{doctor.name}</h2>
-        <h3>{doctor.education}</h3>
-        <h4>{doctor.speciality}</h4>
-        <button onClick={this.handleClick}>Book Appointment</button>
+        <h2 onClick={this.handleChange}>{doctor.name}</h2>
+        {this.state.on && <div>  
+          <h3>{doctor.education}</h3>
+          <h4>{doctor.speciality}</h4>
+          <button onClick={this.handleClick}>Book Appointment</button>
+        </div>}
         <br />
         <br />
       </div>
