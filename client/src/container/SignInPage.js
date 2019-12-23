@@ -13,9 +13,6 @@ const mapDispatchToProps = dispatch => ({
 
 class SignInPage extends React.Component {
   
-  // need to get the username from input 
-  // and post to the store using axios
-  // for API post, dispatch to send to the store
   state = {
     username: ''
   }
@@ -70,7 +67,7 @@ class SignInPage extends React.Component {
         </div>
         <div className="body">
           <form onSubmit={this.handleSubmit}>
-            <input type='text' 
+            <input type='text'
               className='input'
               placeholder='username'
               name='username'

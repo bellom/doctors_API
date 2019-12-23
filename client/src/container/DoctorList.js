@@ -1,5 +1,13 @@
 import React from "react";
 import "../components/App.css";
+import { connect } from 'react-redux';
+import { fetchDoctor } from '../actions/fetchAction'
+
+
+const mapDispatchToProps = dispatch => ({
+  fetchDoctor: (doctors) => dispatch(fetchDoctor(doctors)),
+});
+
 
 class DoctorList extends React.Component {
   
@@ -7,11 +15,21 @@ class DoctorList extends React.Component {
     doctors: []
   };
 
+  handleClick = e => {
+    e.preventDefault()
+    this.props.history.push('/bookingPage');
+  }
+
   componentDidMount() {
     fetch('/api/doctors')
       .then(response => response.json())
       .then(json => this.setState({ doctors: json }))
       .catch(error => console.log(error));
+
+    const { doctors } = this.state
+    const { fetchDoctor } = this.props
+
+    fetchDoctor(doctors) 
   }
 
   renderDoctors() {
@@ -20,6 +38,9 @@ class DoctorList extends React.Component {
         <h2>{doctor.name}</h2>
         <h3>{doctor.education}</h3>
         <h4>{doctor.speciality}</h4>
+        <button onClick={this.handleClick}>Book Appointment</button>
+        <br />
+        <br />
       </div>
     )); 
   }
@@ -47,4 +68,4 @@ class DoctorList extends React.Component {
   };
 };
 
-export default DoctorList;
+export default connect(null, mapDispatchToProps)(DoctorList);

@@ -5,10 +5,10 @@ export const createUser = user => {
   };
 };
 
-export const fetchDoctor = doctor => {
+export const fetchDoctor = doctors => {
   return {
     type: "FETCH_DOCTOR",
-    doctor,
+    doctors,
   };
 };
 

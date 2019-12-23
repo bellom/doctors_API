@@ -8,4 +8,5 @@ const doctor = (state = [], action) => {
   }
 };
 
+
 export default doctor;
