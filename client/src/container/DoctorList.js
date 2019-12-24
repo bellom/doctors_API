@@ -11,7 +11,6 @@ const mapDispatchToProps = dispatch => ({
   setDoctorId: (id) => dispatch(setDoctorId(id)),
 });
 
-
 class DoctorList extends React.Component {
   
   state = {

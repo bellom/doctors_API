@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "../components/App.css";
 import Datetime from 'react-datetime';
 import { connect } from 'react-redux';
 
@@ -16,7 +16,8 @@ const mapStateToProps = state => {
 class BookingPage extends React.Component {
 
     state = {
-      doctor: {}
+      doctor: {},
+      date: ''
     }
 
   componentDidMount() {
@@ -27,20 +28,29 @@ class BookingPage extends React.Component {
     })
   }
   
+  handleChange(date) {
+    this.setState({
+      date: date._d
+    });
+  }
+
   render (){
 
     const { user } = this.props
     const { doctor } = this.state
 
+    console.log(this.state.date)
     return (
       <div className="App">
         <div className="headTitle">
           <span>&#60;</span> Making a Booking
-          <Datetime />
+          <Datetime onChange={this.handleChange}/>
         </div>
         <header className="App-bdy">
-          <div>doctor's info: {doctor.name}</div>
-          <div></div>
+          <div>doctor's info: </div>
+          <div>{doctor.name}</div>
+          <div>{doctor.speciality}</div>
+          <div>{doctor.education}</div>
           <form>
             <input value={user}/>
           </form>
@@ -51,6 +61,9 @@ class BookingPage extends React.Component {
   }
 };
 
+// get the value of the date
+// store to redux store
+// 
 
 
 export default connect(mapStateToProps, null)(BookingPage);

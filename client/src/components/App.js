@@ -5,7 +5,7 @@ import SignInPage from '../container/SignInPage';
 import SignUpPage from "./SignUpPage";
 import DoctorList from '../container/DoctorList';
 import DoctorDetails from "./DoctorDetails";
-import BookingPage from "./BookingPage";
+import BookingPage from "../container/BookingPage";
 import BookedList from "../container/BookedList";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
