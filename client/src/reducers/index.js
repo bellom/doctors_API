@@ -1,11 +1,13 @@
 import { combineReducers } from 'redux';
 import user from './user';
-import doctor from './doctor';
+import doctors from './doctor';
 import appointment from './appointment';
+import doctorId from './doctorId';
 
 
 export default combineReducers({
   user,
-  doctor,
+  doctors,
   appointment,
+  doctorId,
 });

@@ -12,6 +12,13 @@ export const fetchDoctor = doctors => {
   };
 };
 
+export const setDoctorId = id => {
+  return {
+    type: "SET_DOCTORID",
+    id,
+  };
+};
+
 export const createAppointment = appointment => {
   return {
     type: "CREATE_APPOINTMENT",
@@ -24,4 +31,7 @@ export const fetchAppointment = appointment => {
     type: "FETCH_APPOINTMENT",
     appointment
   };
+
+
+  
 };

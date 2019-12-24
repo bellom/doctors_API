@@ -1,4 +1,4 @@
-const doctor = (state = [], action) => {
+const doctors = (state = [], action) => {
   switch (action.type) {
     case 'FETCH_DOCTOR':
       return action.doctors;
@@ -9,4 +9,4 @@ const doctor = (state = [], action) => {
 };
 
 
-export default doctor;
+export default doctors;

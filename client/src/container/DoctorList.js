@@ -2,53 +2,58 @@ import React from "react";
 import "../components/App.css";
 import { connect } from 'react-redux';
 import { fetchDoctor } from '../actions/fetchAction'
+import { setDoctorId } from '../actions/fetchAction'
+
 
 
 const mapDispatchToProps = dispatch => ({
   fetchDoctor: (doctors) => dispatch(fetchDoctor(doctors)),
+  setDoctorId: (id) => dispatch(setDoctorId(id)),
 });
 
 
 class DoctorList extends React.Component {
   
   state = {
-    doctors: [],
-    on: false
+    doctors: []
   };
 
-  handleClick = e => {
+  handleSubmit = e => {
     e.preventDefault()
+    const id = Number(e.target.id.slice(3))
+    const { setDoctorId } = this.props
+    setDoctorId(id)
     this.props.history.push('/bookingPage');
   }
 
-  handleChange = e => {
+  handleClick = e => {
     e.preventDefault()
-    this.setState({
-      on: !this.state.on
-    })
-    
+    const id = e.target.id
+    document.getElementById(`show${id}`).style.display = document.getElementById(`show${id}`).style.display === 'block' ? 'none' : 'block'
   }
-  componentDidMount() {
-    fetch('/api/doctors')
+
+  async componentDidMount() {
+    await fetch('/api/doctors')
       .then(response => response.json())
       .then(json => this.setState({ doctors: json }))
       .catch(error => console.log(error));
 
-    const { doctors } = this.state
-    const { fetchDoctor } = this.props
-
-    fetchDoctor(doctors) 
-  }
+      
+      const { doctors } = this.state
+      const { fetchDoctor } = this.props
+      
+      fetchDoctor(doctors) 
+    }
 
   renderDoctors() {
     return this.state.doctors.map(doctor => (
       <div key={doctor.id} className='doctorlist'>
-        <h2 onClick={this.handleChange}>{doctor.name}</h2>
-        {this.state.on && <div>  
+        <h2 id={doctor.id} onClick={this.handleClick} >{doctor.name}</h2>
+        <div id={`show${doctor.id}`} style={{display: 'none'}}>  
           <h3>{doctor.education}</h3>
           <h4>{doctor.speciality}</h4>
-          <button onClick={this.handleClick}>Book Appointment</button>
-        </div>}
+          <button onClick={this.handleSubmit} id={`btn${doctor.id}`}>Book Appointment</button>
+        </div>
         <br />
         <br />
       </div>
