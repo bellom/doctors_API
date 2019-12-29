@@ -28,14 +28,15 @@ class BookingPage extends React.Component {
     })
   }
   
-  handleDate(date){
+  handleDate(e){
     this.setState({
-      date: date._d
+      date: e.target.value
     });
-    console.log(this.state.date)
  };
 
   render (){
+
+    console.log(this.state.date)
 
     const { user } = this.props
     const { doctor } = this.state
@@ -44,7 +45,7 @@ class BookingPage extends React.Component {
       <div className="App">
         <div className="headTitle">
           <span>&#60;</span> Making a Booking
-          <Datetime onChange={this.handleDate} />
+          <Datetime onChange={this.props.handleDate} />
         </div>
         <header className="App-bdy">
           <div>doctor's info: </div>
