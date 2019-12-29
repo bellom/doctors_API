@@ -1,6 +1,6 @@
 import React from "react";
 import "../components/App.css";
-import Datetime from 'react-datetime';
+import DateTime from 'react-datetime';
 import { connect } from 'react-redux';
 
 
@@ -19,7 +19,7 @@ class BookingPage extends React.Component {
       doctor: {},
       date: ''
     }
-
+    
   componentDidMount() {
     const { doctors, doctorId } = this.props
     const doctor = doctors.filter(doctor => doctor.id === doctorId)[0]
@@ -28,11 +28,12 @@ class BookingPage extends React.Component {
     })
   }
   
-  handleChange(date) {
+  handleDate(e){
     this.setState({
-      date: date._d
-    });
-  }
+      date: e.target.value
+    })
+    console.log(this.state.date)
+ };
 
   render (){
 
@@ -44,7 +45,7 @@ class BookingPage extends React.Component {
       <div className="App">
         <div className="headTitle">
           <span>&#60;</span> Making a Booking
-          <Datetime onChange={this.handleChange}/>
+          <DateTime onChange={this.props.handleDate}/>
         </div>
         <header className="App-bdy">
           <div>doctor's info: </div>
@@ -54,7 +55,7 @@ class BookingPage extends React.Component {
           <form>
             <input value={user}/>
           </form>
-          <button className='input'>Book Appointment</button>
+          <button className='input' onClick={this.handleDate}>Book Appointment</button>
         </header>
       </div>
     );
