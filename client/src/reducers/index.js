@@ -3,6 +3,7 @@ import user from './user';
 import doctors from './doctor';
 import appointment from './appointment';
 import doctorId from './doctorId';
+import date from './date';
 
 
 export default combineReducers({
@@ -10,4 +11,5 @@ export default combineReducers({
   doctors,
   appointment,
   doctorId,
+  date,
 });

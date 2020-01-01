@@ -2,7 +2,8 @@ import React from "react";
 import "../components/App.css";
 import Datetime from 'react-datetime';
 import { connect } from 'react-redux';
-
+import moment from 'moment'
+import { setDate } from '../actions/fetchAction'
 
 
 const mapStateToProps = state => {
@@ -13,12 +14,16 @@ const mapStateToProps = state => {
   }
 };
 
+const mapDispatchToProps = dispatch => ({
+  setDate: (date) => dispatch(setDate(date))
+});
+
 class BookingPage extends React.Component {
 
     state = {
       doctor: {},
-      date: new Date()
-    }
+      date: ''
+    };
     
   componentDidMount(e) {
     const { doctors, doctorId } = this.props
@@ -26,13 +31,26 @@ class BookingPage extends React.Component {
     this.setState({
       doctor
     })
-  }
+  };
   
-  handleDate(e){
+  handleDate = e => {
     this.setState({
-      date: e.target.value
-    });
+      date: moment(e._d).format('MMMM Do YYYY, h:mm:ss a')
+    })
  };
+
+  handleSubmit = () => {
+    const { date } = this.state
+    const { setDate } = this.props
+
+    setDate(date)
+    
+    this.props.history.push('/bookedlist');
+  };
+
+  date() {
+    return this.state.date
+  };
 
   render (){
 
@@ -45,17 +63,20 @@ class BookingPage extends React.Component {
       <div className="App">
         <div className="headTitle">
           <span>&#60;</span> Making a Booking
-          <Datetime onChange={this.props.handleDate} />
+          <Datetime onChange={this.handleDate} />
         </div>
         <header className="App-bdy">
-          <div>doctor's info: </div>
-          <div>{doctor.name}</div>
-          <div>{doctor.speciality}</div>
-          <div>{doctor.education}</div>
+          <div>Doctor's Info: </div>
+          <div>Doctor's Name: {doctor.name}</div>
+          <div>Doctor's speciality: {doctor.speciality}</div>
+          <div>Doctor's Education: {doctor.education}</div>
+          <br />
+          <div>Appointment Time: {this.date()}</div>
           <form>
-            <input value={user}/>
+            <label for="username">Username: </label>
+            <input value={user} />
           </form>
-          <button className='input' onSubmit={this.handleDate}>Book Appointment</button>
+          <button className='input' onClick={this.handleSubmit}>Book Appointment</button>
         </header>
       </div>
     );
@@ -64,7 +85,6 @@ class BookingPage extends React.Component {
 
 // get the value of the date
 // store to redux store
-// 
 
 
-export default connect(mapStateToProps, null)(BookingPage);
+export default connect(mapStateToProps, mapDispatchToProps)(BookingPage);

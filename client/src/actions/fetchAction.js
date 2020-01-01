@@ -30,8 +30,12 @@ export const fetchAppointment = appointment => {
   return {
     type: "FETCH_APPOINTMENT",
     appointment
+  };  
+};
+
+export const setDate = date => {
+  return {
+    type: "SET_DATE",
+    date
   };
-
-
-  
 };

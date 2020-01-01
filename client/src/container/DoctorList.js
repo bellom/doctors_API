@@ -37,11 +37,10 @@ class DoctorList extends React.Component {
       .then(json => this.setState({ doctors: json }))
       .catch(error => console.log(error));
 
-      
       const { doctors } = this.state
       const { fetchDoctor } = this.props
       
-      fetchDoctor(doctors) 
+      fetchDoctor(doctors)
     }
 
   renderDoctors() {
