@@ -6,7 +6,6 @@ import axios from 'axios';
 import { createUser } from '../actions/fetchAction'
 
 
-
 const mapDispatchToProps = dispatch => ({
   createUser: (user) => dispatch(createUser(user)),
 });
@@ -14,43 +13,44 @@ const mapDispatchToProps = dispatch => ({
 class SignInPage extends React.Component {
   
   state = {
-    username: ''
+    username: '',
   }
-  
+
   addUserToDB = async () => {
-    axios.post('/api/users/', {username: this.state.username})
+    const { createUser } = this.props;
+    const res = await axios.post('/api/users/', {username: this.state.username})
     .catch(err => console.log(err));
-    this.props.history.push('/home')
+    const user = res.data
+    createUser(user)
   }
   
-  checkUser = async (username) => {
+  checkUser = async () => {
+    const { createUser } = this.props;
     const user  = await fetch('/api/users/')
     .then(res => res.json())
     .then(json => json.find(user => user.username === this.state.username))
     .catch(err => console.log(err));
-    if (user) return user && this.props.history.push('/home');
-    return this.addUserToDB();
+    if (user) {
+      createUser(user)
+      this.props.history.push('/home');
+      return
+    } else {
+      this.addUserToDB();
+    }
   }
   
   handleChange = e => {
     this.setState({
-      username: e.target.value
+      username: e.target.value,
     });
   }
-  
+
   handleSubmit = e => {
     e.preventDefault()
     this.checkUser()
-    const { username } = this.state;
-    const { createUser } = this.props;
-
-    createUser(username)
-
-    this.setState({
-      username: username
-    })
+    this.props.history.push('/home');
   }
-  
+
   render() {
     
     const { username } = this.state;

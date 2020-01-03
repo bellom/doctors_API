@@ -3,26 +3,30 @@ import "../components/App.css";
 import Datetime from 'react-datetime';
 import { connect } from 'react-redux';
 import moment from 'moment'
-import { setDate } from '../actions/fetchAction'
+import { setDate, createAppointment } from '../actions/fetchAction'
+
 
 
 const mapStateToProps = state => {
   return {
-    user: state.user,
+    user: state.user.username,
+    userId: state.user.id,
     doctors: state.doctors,
-    doctorId: state.doctorId
+    doctorId: state.doctorId,
+    date: state.date
   }
 };
 
 const mapDispatchToProps = dispatch => ({
-  setDate: (date) => dispatch(setDate(date))
+  setDate: (date) => dispatch(setDate(date)),
 });
 
 class BookingPage extends React.Component {
 
     state = {
       doctor: {},
-      date: ''
+      date: '',
+      appointment: {}
     };
     
   componentDidMount(e) {
@@ -37,14 +41,14 @@ class BookingPage extends React.Component {
     this.setState({
       date: moment(e._d).format('MMMM Do YYYY, h:mm:ss a')
     })
- };
-
-  handleSubmit = () => {
     const { date } = this.state
     const { setDate } = this.props
 
     setDate(date)
-    
+ };
+
+  handleSubmit = () => {
+    this.checkApt()
     this.props.history.push('/bookedlist');
   };
 
@@ -53,8 +57,6 @@ class BookingPage extends React.Component {
   };
 
   render (){
-
-    console.log(this.state.date)
 
     const { user } = this.props
     const { doctor } = this.state
@@ -82,9 +84,6 @@ class BookingPage extends React.Component {
     );
   }
 };
-
-// get the value of the date
-// store to redux store
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(BookingPage);

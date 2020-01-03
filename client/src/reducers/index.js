@@ -11,5 +11,5 @@ export default combineReducers({
   doctors,
   appointment,
   doctorId,
-  date,
+  date
 });

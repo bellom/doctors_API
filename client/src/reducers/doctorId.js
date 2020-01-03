@@ -8,5 +8,4 @@ const doctorId = (state = [], action) => {
     }
   };
   
-  
   export default doctorId;

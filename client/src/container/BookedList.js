@@ -1,18 +1,19 @@
 import React from "react";
 import "../components/App.css";
 import { connect } from "react-redux";
-// import { thunk_action_creator } from "../actions/fetchAction";
 
+
+const mapStateToProps = state => {
+  return {
+    data: state
+  };
+};
 
 class BookedList extends React.Component {
 
   state = {
     appointments: []
   }
-
-// fetch the data from API and send to the store using mapdispatchtoprops
-// fetch data from store using mapstatetoprops
-
 
   componentDidMount() {
     fetch('/api/appointments')
@@ -46,9 +47,4 @@ class BookedList extends React.Component {
   }
 };
 
-const mapStateToProps = state => {
-  return {
-    data: state
-  };
-};
 export default connect(mapStateToProps, null)(BookedList);

@@ -1,4 +1,4 @@
-const appointment = (state = [], action) => {
+const appointment = (state = {}, action) => {
   switch (action.type) {
     case 'CREATE_APPOINTMENT':
       return action.appointment;
