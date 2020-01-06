@@ -51,25 +51,6 @@ class BookingPage extends React.Component {
     })
     .catch(err => console.log(err));
   }
-
-  // checkAppt = async () => {
-  //   const { createAppointment } = this.props;
-  //   const { doctor } = this.state
-  //   const appt = await fetch('/api/appointments/')
-  //   .then(res => res.json())
-  //   console.log(appt)
-  //   .then(json => json.find(appointment => 
-  //     appointment.user_name && appointment.doctor_name
-  //     === this.state.user.username && doctor.name))
-  //     .catch(err => console.log(err));
-  //     if (appt) {
-  //       createAppointment(appt)
-  //       this.props.history.push('/bookedlist');
-  //       return
-  //     } else {
-  //       this.addApptToDB();
-  //     }
-  // }
   
   handleDate = e => {
     this.setState({
@@ -84,7 +65,6 @@ class BookingPage extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault()
     this.addApptToDB();
-    // this.checkAppt();
     this.props.history.push('/bookedlist');
   };
 
@@ -111,7 +91,7 @@ class BookingPage extends React.Component {
           <br />
           <div>Appointment Time: {this.date()}</div>
           <form>
-            <label for="username">Username: </label>
+            <label for="username">Name of Patient: </label>
             <input value={user} />
           </form>
           <button className='input' onClick={this.handleSubmit}>Book Appointment</button>

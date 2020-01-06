@@ -4,7 +4,7 @@ import "../components/App.css";
 import { connect } from 'react-redux';
 import axios from 'axios';
 import { createUser } from '../actions/fetchAction'
-
+import { Button } from 'react-bootstrap';
 
 const mapDispatchToProps = dispatch => ({
   createUser: (user) => dispatch(createUser(user)),
@@ -57,30 +57,31 @@ class SignInPage extends React.Component {
 
     return (
       <div className="App App-login"> 
-        <div>
-          <img src={logo} className="App-logo" alt="logo" />
-          <h3>Doctor's Meetup</h3>
+        <div className="Div-one">
+          <img src={logo} className="App-logo" alt="logo" /><br />
+          <span>Med<span className='med'>Health</span></span>
         </div>
         <div>
           <h2>WELCOME</h2>
           <span>Sign in to continue</span>
         </div>
-        <div className="body">
+        <div className="div-two">
           <form onSubmit={this.handleSubmit}>
             <input type='text'
-              className='input'
-              placeholder='username'
+              className='login-input form-login'
+              placeholder='patient name'
               name='username'
               value={username}
               onChange={this.handleChange}
             />
-            <button type='submit'>
+            <br /><br />
+            <Button type='submit' className='login-btn form-login' >
               SignIn
-            </button>
+            </Button>
           </form>
         </div>
         
-        <div>By continuing you agree to <a href="/">Terms & Conditions</a></div>
+        <div className="div-three">By continuing you agree to <a href="/">Terms & Conditions</a></div>
       </div>
     );
   };

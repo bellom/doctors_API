@@ -6,12 +6,47 @@ General Styles
 }
 
 .App-logo {
-  height: 9vmin;
+  height: 15vmin;
 }
 
-.setBorder {
-  border: 1px solid grey;
-  color: black;
+/* ******************************
+SignInPage.js
+****************************** */
+.App-login {
+  background-color: #e0fdf7;
+  height: 100vh;
+}
+
+.Div-one {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.med {
+  color: #009688;
+}
+
+.div-two {
+  padding-top: 50px;
+  padding-bottom: 220px;
+}
+
+.form-login {
+  border-radius: 20px;
+  height: 5vh;
+  width: 82vw;
+}
+
+.login-btn,
+.login-btn:hover,
+.login-btn:focus,
+.login-btn:active {
+  background-color: #009688;
+  border-color: #009688;
+}
+
+.login-input {
+  background-color: white;
 }
 
 /* ******************************
@@ -42,16 +77,9 @@ LandingPage.js
   text-align: left;
 }
 
-.input {
-  background-color: white;
-  border-radius: 70px;
-  height: 5vh;
-  width: 82vw;
-}
-
-/* .body {
+.body {
   margin-bottom: 200px;
-} */
+}
 
 .bodyTitle {
   text-transform: uppercase;
@@ -121,11 +149,9 @@ DoctorDetails.js
 ****************************** */
 
 /* ******************************
-LoginPage.js
+BookedList.js
 ****************************** */
-.App-login {
-  background-color: #e0fdf7;
+.setBorder {
+  border: 1px solid grey;
+  color: black;
 }
-/* ******************************
-SignUpPage.js
-****************************** */
