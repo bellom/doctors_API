@@ -9,6 +9,9 @@ General Styles
   height: 15vmin;
 }
 
+Link {
+  color: #009688;
+}
 /* ******************************
 SignInPage.js
 ****************************** */
@@ -38,9 +41,7 @@ SignInPage.js
 }
 
 .login-btn,
-.login-btn:hover,
-.login-btn:focus,
-.login-btn:active {
+.login-btn:hover {
   background-color: #009688;
   border-color: #009688;
 }
@@ -60,8 +61,16 @@ LandingPage.js
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 38vh;
-  padding-bottom: 15.3vh;
+  height: 42vh;
+  padding-bottom: 13.3vh;
+}
+
+.lessThan a {
+  color: #009688;
+  font-size: 30px;
+  margin-right: 50px;
+  margin-left: -10px;
+  text-decoration: none;
 }
 
 .App-link {
@@ -71,19 +80,21 @@ LandingPage.js
 .headTitle {
   background-color: rgb(224, 253, 247);
   color: #009688;
-  font-size: 26px;
+  font-size: 23px;
   min-height: 10vh;
-  padding: 40px 45px 0px;
+  padding: 40px 45px 30px;
   text-align: left;
-}
-
-.body {
-  margin-bottom: 200px;
 }
 
 .bodyTitle {
   text-transform: uppercase;
   color: black;
+}
+
+.homepg-input {
+  border-radius: 25px;
+  height: 5.5vh;
+  width: 80vw;
 }
 
 .flex {
@@ -93,14 +104,16 @@ LandingPage.js
 
 .cat:hover{
   background-color: #09d3ac;
+  border-color: #009688;
 }
 
 .cat {
-  width: 30%;
   background-color: rgb(224, 253, 247);
-  height: 15vh;
   border: 1px solid grey;
+  color: #009688;
+  height: 9vh;
   margin-right: 5px;
+  width: 30%;
 }
 
 span {
@@ -122,6 +135,10 @@ ul li {
   padding-top: 9px;
 }
 
+footer	{ 
+  position:fixed; 
+  top:87.5%;
+}
 
 /* ******************************
 DoctorList.js
