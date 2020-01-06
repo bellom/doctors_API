@@ -16,11 +16,14 @@ class BookedList extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/api/appointments')
-      .then(res => res.json())
-      .then(json => this.setState({ appointments: json}))
-      .catch(error => console.log(error));
-  }
+    setTimeout(() => {
+      fetch('/api/appointments')
+        .then(res => res.json())
+        .then(json => this.setState({ appointments: json}))
+        .catch(error => console.log(error));
+      }, 250)
+
+      }
 
   renderAppointments() {
     return this.state.appointments.map(appointment => (

@@ -59,7 +59,7 @@ class SignInPage extends React.Component {
       <div className="App App-login"> 
         <div>
           <img src={logo} className="App-logo" alt="logo" />
-          <h3>doctor's meetup</h3>
+          <h3>Doctor's Meetup</h3>
         </div>
         <div>
           <h2>WELCOME</h2>

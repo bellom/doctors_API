@@ -3,9 +3,8 @@ import "../components/App.css";
 import Datetime from 'react-datetime';
 import { connect } from 'react-redux';
 import moment from 'moment'
-import { setDate, createAppointment } from '../actions/fetchAction'
-
-
+import { setDate } from '../actions/fetchAction'
+import axios from 'axios';
 
 const mapStateToProps = state => {
   return {
@@ -36,6 +35,41 @@ class BookingPage extends React.Component {
       doctor
     })
   };
+
+  addApptToDB = async () => {
+
+    const { user, userId, doctorId, date } = this.props
+    const { doctor } = this.state
+    console.log(user, userId, doctorId, date, doctor)
+
+    await axios.post('api/appointments/', {
+      date: date,
+      user_id: userId,
+      doctor_id: doctorId,
+      doctor_name: doctor.name,
+      user_name: user
+    })
+    .catch(err => console.log(err));
+  }
+
+  // checkAppt = async () => {
+  //   const { createAppointment } = this.props;
+  //   const { doctor } = this.state
+  //   const appt = await fetch('/api/appointments/')
+  //   .then(res => res.json())
+  //   console.log(appt)
+  //   .then(json => json.find(appointment => 
+  //     appointment.user_name && appointment.doctor_name
+  //     === this.state.user.username && doctor.name))
+  //     .catch(err => console.log(err));
+  //     if (appt) {
+  //       createAppointment(appt)
+  //       this.props.history.push('/bookedlist');
+  //       return
+  //     } else {
+  //       this.addApptToDB();
+  //     }
+  // }
   
   handleDate = e => {
     this.setState({
@@ -47,8 +81,10 @@ class BookingPage extends React.Component {
     setDate(date)
  };
 
-  handleSubmit = () => {
-    this.checkApt()
+  handleSubmit = (e) => {
+    e.preventDefault()
+    this.addApptToDB();
+    // this.checkAppt();
     this.props.history.push('/bookedlist');
   };
 
@@ -57,7 +93,7 @@ class BookingPage extends React.Component {
   };
 
   render (){
-
+    
     const { user } = this.props
     const { doctor } = this.state
 
