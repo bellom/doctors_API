@@ -10,7 +10,6 @@ General Styles
 .App {
   text-align: center;
   max-width: 500px;
-  height: 100%;
   margin: 0 auto;
   border-radius: 30px;
   border: 1px solid #bfbfbf;
@@ -22,6 +21,11 @@ Link {
 
 div {
   font-size: 12px
+}
+
+Button {
+  border: 5px solid transparent;
+  box-shadow: 2px 4px 8px rgba(172,163,163,.466);
 }
 /* ******************************
 SignInPage.js
@@ -36,7 +40,7 @@ SignInPage.js
 }
 
 .Div-one {
-  padding-top: 100px;
+  padding-top: 80px;
   padding-bottom: 50px;
 }
 
@@ -61,10 +65,13 @@ SignInPage.js
 .login-btn:hover {
   background-color: #009688;
   border-color: #009688;
+  box-shadow: 2px 4px 8px rgba(172,163,163,.466);
 }
 
 .login-input {
   background-color: white;
+  border: 5px solid transparent;
+  box-shadow: 2px 4px 8px rgba(172,163,163,.466);
 }
 
 /* ******************************
@@ -85,7 +92,7 @@ LandingPage.js
 .lessThan a {
   color: #009688;
   font-size: 30px;
-  margin-right: 50px;
+  margin-right: 40px;
   text-decoration: none;
 }
 
@@ -114,7 +121,8 @@ LandingPage.js
   height: 40px;
   width: 80%;
   padding: 5px 0 5px 7px;
-
+  border: 5px solid transparent;
+  box-shadow: 2px 4px 8px rgba(172,163,163,.466);
 }
 
 .doc-grid {
@@ -178,6 +186,10 @@ li {
     margin-right: 28px;
     padding-top: 6px;
   }
+
+  .headTitle {
+    padding: 40px 4px 30px;
+  }
 }
 
 @media only screen and (min-width: 289px) and (max-width: 470px) {
@@ -209,28 +221,80 @@ li {
 /* ******************************
 DoctorList.js
 ****************************** */
-.settings {
-  background-color: darkgreen;
-}
-
-.doctor {
-  border: 1px solid grey;
-  color: black;
-}
 
 .doctorlist {
-  border: 1px solid grey;
-  color: black;
+  border: 1px solid hsla(0,0%,42%,.144);
+  box-shadow: 4px 8px 16px hsla(0,0%,42%,.144);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .hideDetails {
   display: none;
 }
 
+.list-doc {
+  color: #009688;
+
+}
+
+.filter {
+  color: #bfbfbf;
+  font-size: 13px;
+}
+
+.list-doc, 
+.filter {
+  margin: 10px 0 15px 15px;
+  text-align: left;
+}
+
+.doc-input{
+  background-color: white;
+  border: 5px solid transparent;
+  box-shadow: 2px 4px 8px rgba(172,163,163,.466);
+  border-radius: 20px;
+  width: 50%;
+}
+
+.doc-div {
+  display: flex;
+}
+
+.doc-name {
+  margin-left: 25px;
+  font-size: 30px;
+}
+
+.doc-img img {
+  border-radius: 50%;
+  width: 7rem;
+  height: 6rem;
+}
+
+.btn-call,
+.btn-book {
+  font-size: 15px;
+  font-weight: 700;
+  width: 25%;
+  border: 1px solid transparent;
+}
+
+.btn-call {
+  background-color: #fff;
+  color: #009688;
+  margin-right: 20px;
+  border-color: #47b7a7;
+
+}
+
+.btn-book {
+  color: #fff;
+}
 /* ******************************
 DoctorDetails.js
 ****************************** */
-
 /* ******************************
 BookedList.js
 ****************************** */

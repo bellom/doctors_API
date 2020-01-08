@@ -33,21 +33,21 @@ class LandingPage extends React.Component {
         </div>
         <div className='doc-grid'>
           <div className='flex'>
-            <Button className='cat' onClick={this.goto}>All</Button>
-            <Button className='cat' onClick={this.goto}>Child Doctor</Button>
-            <Button className='cat' onClick={this.goto}>Artery</Button>
+            <Button className='cat' onClick={this.goto}>General Doctor</Button>
+            <Button className='cat' onClick={this.goto}>Child Care</Button>
+            <Button className='cat' onClick={this.goto}>Skin</Button>
           </div>
           <br />
           <div className='flex'>
             <Button className='cat' onClick={this.goto}>Family Physician</Button>
-            <Button className='cat' onClick={this.goto}>Vent Doctor</Button>
-            <Button className='cat' onClick={this.goto}>Abecos</Button>
+            <Button className='cat' onClick={this.goto}>Mental Health</Button>
+            <Button className='cat' onClick={this.goto}>Dentist</Button>
           </div>
           <br />
           <div className='flex'>
             <Button className='cat' onClick={this.goto}>Cardiac</Button>
-            <Button className='cat' onClick={this.goto}>Child Doctor</Button>
-            <Button className='cat' onClick={this.goto}>Artery</Button>
+            <Button className='cat' onClick={this.goto}>Child Care</Button>
+            <Button className='cat' onClick={this.goto}>Skin</Button>
           </div>
           <br />
           <div className='flex'>

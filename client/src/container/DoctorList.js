@@ -3,6 +3,7 @@ import "../components/App.css";
 import { connect } from 'react-redux';
 import { fetchDoctor } from '../actions/fetchAction'
 import { setDoctorId } from '../actions/fetchAction'
+import { Link } from 'react-router-dom';
 
 
 
@@ -44,16 +45,37 @@ class DoctorList extends React.Component {
       fetchDoctor(doctors) 
     }
 
+  // renderDoctors() {
+  //   return this.state.doctors.map(doctor => (
+  //     <div key={doctor.id} className='doctorlist'>
+  //       <h2 id={doctor.id} onClick={this.handleClick} >{doctor.name}</h2>
+  //       <div id={`show${doctor.id}`} style={{display: 'none'}}>  
+  //         <h3>{doctor.education}</h3>
+  //         <h4>{doctor.speciality}</h4>
+  //         <button onClick={this.handleSubmit} id={`btn${doctor.id}`}>Book Appointment</button>
+  //       </div>
+  //       <br />
+  //       <br />
+  //     </div>
+  //   )); 
+  // }
+
   renderDoctors() {
     return this.state.doctors.map(doctor => (
       <div key={doctor.id} className='doctorlist'>
-        <h2 id={doctor.id} onClick={this.handleClick} >{doctor.name}</h2>
-        <div id={`show${doctor.id}`} style={{display: 'none'}}>  
-          <h3>{doctor.education}</h3>
-          <h4>{doctor.speciality}</h4>
-          <button onClick={this.handleSubmit} id={`btn${doctor.id}`}>Book Appointment</button>
+        <div className='doc-div'>
+          <div className ='doc-img'><img src="https://robohash.org/perspiciatisautemlaborum.png?size=300x300&amp;set=set1" alt="Avatar" /></div>
+          <div className='doc-name' id={doctor.id} onClick={this.handleClick} >{doctor.name}</div>
         </div>
-        <br />
+          <span className='filter'>Click Doctor's Name for more info!</span>
+        <div id={`show${doctor.id}`} style={{display: 'none'}}>  
+          <h5>{doctor.education}</h5>
+          <h6>{doctor.speciality}</h6>
+          <div className='btn-appt'>
+            <button className='btn-call form-login' onClick={this.handleSubmit} id={`btn${doctor.id}`}>Call</button>
+            <button className='btn-book login-btn form-login' onClick={this.handleSubmit} id={`btn${doctor.id}`}>Book</button>
+          </div>
+        </div>
         <br />
       </div>
     )); 
@@ -62,21 +84,33 @@ class DoctorList extends React.Component {
   render() {
   return (
     <div className="App">
-      <div className="headTitle">
-        <span>&#60;</span> Doctors <span>&#x25bc;</span>
-      </div>
-      <header className="App-bdy">
-        <div className="body">
-          <i className="material-icons input settings">settings_application</i>
+        <div className="headTitle">
+          <span className='lessThan'><Link to='/home'>&#60;</Link></span>General Doctor <span>&#x25bc;</span>
         </div>
         <div>
-          <h3>List of Doctors from search</h3>
-          <h4>Filter By Name: <input type='text'/></h4>
+          <h6 className='list-doc'>List of Doctors from search</h6>
+          <h6 className='filter'>Filter By Category: <input type='text' className='doc-input'/></h6>
           <div className="doctor">
             <div>{this.renderDoctors()}</div>
           </div>
         </div>
-      </header>
+      <div className='footer'>
+          <ul>
+            <li>
+              <i className="material-icons">home</i>
+            </li>
+            <li>
+              <i className="material-icons">description</i>
+            </li>
+            <li>
+              <i className="material-icons">forum</i>
+            </li>
+            <li>
+              <i className="material-icons">notifications</i>
+            </li>
+          </ul>
+        </div>
+
     </div>
   );
   };
