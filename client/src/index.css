@@ -1,3 +1,6 @@
-/* #root {
-  background-color: rgb(224, 253, 247);
+/* 
+@media(max-width: 500px){
+  div {
+    font-size: 15px;
+  }
 } */

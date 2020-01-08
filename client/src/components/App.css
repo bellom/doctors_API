@@ -1,8 +1,19 @@
 /* ******************************
 General Styles
 ****************************** */
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+  max-width: 500px;
+  height: 100vh;
+  margin: 0 auto;
+  border-radius: 30px;
+  border: 4px solid #bfbfbf;
 }
 
 .App-logo {
@@ -32,12 +43,14 @@ SignInPage.js
 .div-two {
   padding-top: 50px;
   padding-bottom: 220px;
+  margin: 0 35px 0 35px;
 }
 
 .form-login {
   border-radius: 20px;
   height: 5vh;
-  width: 82vw;
+  padding: 0 0 5px 5px;
+  width: 100%;
 }
 
 .login-btn,
