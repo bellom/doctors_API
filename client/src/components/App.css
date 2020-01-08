@@ -82,10 +82,6 @@ LandingPage.js
   height: 42vh;
 }
 
-/* .App-logo2 {
-  height: 200px;
-} */
-
 .lessThan a {
   color: #009688;
   font-size: 30px;
@@ -121,6 +117,10 @@ LandingPage.js
 
 }
 
+.doc-grid {
+  width: 100%;
+}
+
 .flex {
   display: flex;
   justify-content: center;
@@ -151,24 +151,60 @@ ul {
   display: flex;
   height: 35px;
   margin-top: 60px;
+  width: 100%;
 }
 
-ul li {
+li {
   margin-right: 100px;
   justify-content: center;
   padding-top: 9px;
 }
 
-footer	{ 
+.footer	{ 
   position:fixed; 
   top:87.5%;
 }
 
-@media only screen and (min-width: 258px) and (max-width: 318px) {
+@media only screen and (min-width: 258px) and (max-width: 320px) {
   .App-body{
     height: 49vh;
   }
+
+  .cat {
+    font-size: 10px;
+  }
+
+  li {
+    margin-right: 28px;
+    padding-top: 6px;
+  }
 }
+
+@media only screen and (min-width: 289px) and (max-width: 470px) {
+  .App-body{
+    height: 45vh;
+  }
+
+  li {
+    margin-right: 80px;
+    padding-top: 6px;
+  }
+} 
+
+@media only screen and (min-width: 289px) and (max-width: 400px) {
+
+  li {
+    margin-right: 60px;
+    padding-top: 6px;
+  }
+} 
+@media only screen and (min-width: 289px) and (max-width: 335px) {
+
+  li {
+    margin-right: 50px;
+    padding-top: 6px;
+  }
+} 
 
 /* ******************************
 DoctorList.js

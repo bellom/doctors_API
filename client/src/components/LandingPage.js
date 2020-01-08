@@ -31,11 +31,11 @@ class LandingPage extends React.Component {
           <br />
           <span>Go ahead and book an appointment.</span>
         </div>
-        <div>
+        <div className='doc-grid'>
           <div className='flex'>
             <Button className='cat' onClick={this.goto}>All</Button>
-            <Button className='cat' onClick={this.goto}>Dermatologists</Button>
-            <Button className='cat' onClick={this.goto}>Endocrinologits</Button>
+            <Button className='cat' onClick={this.goto}>Child Doctor</Button>
+            <Button className='cat' onClick={this.goto}>Artery</Button>
           </div>
           <br />
           <div className='flex'>
@@ -46,8 +46,8 @@ class LandingPage extends React.Component {
           <br />
           <div className='flex'>
             <Button className='cat' onClick={this.goto}>Cardiac</Button>
-            <Button className='cat' onClick={this.goto}>Dermatologists</Button>
-            <Button className='cat' onClick={this.goto}>Endocrinologits</Button>
+            <Button className='cat' onClick={this.goto}>Child Doctor</Button>
+            <Button className='cat' onClick={this.goto}>Artery</Button>
           </div>
           <br />
           <div className='flex'>
@@ -58,8 +58,8 @@ class LandingPage extends React.Component {
           <br />
           <div className='flex'>
             <Button className='cat' onClick={this.goto}>Cardiac</Button>
-            <Button className='cat' onClick={this.goto}>Dermatologists</Button>
-            <Button className='cat' onClick={this.goto}>Endocrinologits</Button>
+            <Button className='cat' onClick={this.goto}>Child Doctor</Button>
+            <Button className='cat' onClick={this.goto}>Artery</Button>
           </div>
           <br />
           <div className='flex'>
@@ -68,10 +68,10 @@ class LandingPage extends React.Component {
             <Button className='cat' onClick={this.goto}>Abecos</Button>
           </div>
           <br />
-          <span>copyright @bellom 2020</span>
+          {/* <span>copyright @bellom 2020</span> */}
 
         </div>
-        <footer className='footer'>
+        <div className='footer'>
           <ul>
             <li>
               <i className="material-icons">home</i>
@@ -86,7 +86,7 @@ class LandingPage extends React.Component {
               <i className="material-icons">notifications</i>
             </li>
           </ul>
-        </footer>
+        </div>
       </div>
     );
   }
