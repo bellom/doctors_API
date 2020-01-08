@@ -16,23 +16,21 @@ class LandingPage extends React.Component {
         <div className="headTitle">
           <span className='lessThan'><Link to='/'>&#60;</Link></span>Doctors
         </div>
-        <header className="App-body">
-          <div className="body">
-            <input
-              type="text"
-              className="homepg-input"
-              placeholder="Search for doctors"
-            />
-            <br />
-            <br />
-            <img src={logo} className="App-logo" alt="logo" />
-            <br /> <br />
-            <h2 className="bodyTitle">search doctors</h2>
-            <span>Search by directly clicking the doctors category below</span>
-            <br />
-            <span>Go ahead and book an appointment.</span>
-          </div>
-        </header>
+        <div className="App-body">
+          <input
+            type="text"
+            className="homepg-input"
+            placeholder="Search for doctors"
+          />
+          <br />
+          <br />
+          <img src={logo} className="App-logo2" alt="logo" />
+          <br /> <br />
+          <h2 className="bodyTitle">search doctors</h2>
+          <span>Search by directly clicking the doctors category below</span>
+          <br />
+          <span>Go ahead and book an appointment.</span>
+        </div>
         <div>
           <div className='flex'>
             <Button className='cat' onClick={this.goto}>All</Button>

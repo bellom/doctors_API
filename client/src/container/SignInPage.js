@@ -58,7 +58,7 @@ class SignInPage extends React.Component {
     return (
       <div className="App App-login"> 
         <div className="Div-one">
-          <img src={logo} className="App-logo" alt="logo" /><br />
+          <img src={logo} className="App-logo1" alt="logo" /><br />
           <span>Med<span className='med'>Health</span></span>
         </div>
         <div>
