@@ -19,7 +19,7 @@ Link {
   color: #009688;
 }
 
-div {
+.text {
   font-size: 12px
 }
 
@@ -192,31 +192,7 @@ li {
   }
 }
 
-@media only screen and (min-width: 289px) and (max-width: 470px) {
-  .App-body{
-    height: 45vh;
-  }
 
-  li {
-    margin-right: 80px;
-    padding-top: 6px;
-  }
-} 
-
-@media only screen and (min-width: 289px) and (max-width: 400px) {
-
-  li {
-    margin-right: 60px;
-    padding-top: 6px;
-  }
-} 
-@media only screen and (min-width: 289px) and (max-width: 335px) {
-
-  li {
-    margin-right: 50px;
-    padding-top: 6px;
-  }
-} 
 
 /* ******************************
 DoctorList.js
@@ -293,8 +269,50 @@ DoctorList.js
   color: #fff;
 }
 /* ******************************
-DoctorDetails.js
+BookingPage.js
 ****************************** */
+.headTitle-booking {
+  background-color: #009688;
+  color: #fff;
+  font-size: 23px;
+  padding: 53px 121px 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  width: 100%;
+}
+
+.booking a {
+  color: #fff;
+}
+
+.btn-booking {
+  color: #fff;
+  margin: 30px 0 20px 0;
+  width: 70%;
+  height: 50px;
+}
+
+.booking-form {
+  margin-bottom: 10px;
+}
+
+.edu,
+.spec {
+  font-variant: small-caps;
+  font-weight: 350;
+}
+
+.patient {
+  margin-right: 5px;
+  font-size: 15px;
+}
+
+.appt-time,
+.patient {
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 200;
+}
 /* ******************************
 BookedList.js
 ****************************** */
@@ -302,3 +320,55 @@ BookedList.js
   border: 1px solid grey;
   color: black;
 }
+
+
+/* ******************************
+Media Query
+****************************** */
+@media only screen and (min-width: 289px) and (max-width: 470px) {
+  .App-body{
+    height: 45vh;
+  }
+
+  li {
+    margin-right: 80px;
+    padding-top: 6px;
+  }
+  .headTitle-booking {
+    padding: 2px 13px 0px;  
+  }
+} 
+
+@media only screen and (min-width: 289px) and (max-width: 400px) {
+
+  li {
+    margin-right: 60px;
+    padding-top: 6px;
+  }
+  .headTitle-booking {
+    padding: 2px 13px 0px;  
+  }
+  
+} 
+@media only screen and (min-width: 289px) and (max-width: 335px) {
+
+  li {
+    margin-right: 50px;
+    padding-top: 6px;
+  }
+  .headTitle-booking {
+    padding: 2px 13px 0px;  
+  }
+} 
+
+@media only screen and (min-width: 259px) and (max-width: 300px) {
+  .headTitle-booking {
+    padding: 2px 13px 0px;  
+  }
+} 
+
+@media only screen and (min-width: 330px) and (max-width: 467px) {
+  .headTitle-booking {
+    padding: 2px 74px 0px;  
+  }
+} 

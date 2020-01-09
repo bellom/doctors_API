@@ -45,21 +45,6 @@ class DoctorList extends React.Component {
       fetchDoctor(doctors) 
     }
 
-  // renderDoctors() {
-  //   return this.state.doctors.map(doctor => (
-  //     <div key={doctor.id} className='doctorlist'>
-  //       <h2 id={doctor.id} onClick={this.handleClick} >{doctor.name}</h2>
-  //       <div id={`show${doctor.id}`} style={{display: 'none'}}>  
-  //         <h3>{doctor.education}</h3>
-  //         <h4>{doctor.speciality}</h4>
-  //         <button onClick={this.handleSubmit} id={`btn${doctor.id}`}>Book Appointment</button>
-  //       </div>
-  //       <br />
-  //       <br />
-  //     </div>
-  //   )); 
-  // }
-
   renderDoctors() {
     return this.state.doctors.map(doctor => (
       <div key={doctor.id} className='doctorlist'>

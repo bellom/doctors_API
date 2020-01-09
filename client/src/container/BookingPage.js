@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import moment from 'moment'
 import { setDate } from '../actions/fetchAction'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+
 
 const mapStateToProps = state => {
   return {
@@ -79,23 +81,22 @@ class BookingPage extends React.Component {
 
     return (
       <div className="App">
-        <div className="headTitle">
-          <span>&#60;</span> Making a Booking
+        <header className="headTitle-booking">
+          <span className='lessThan booking'><Link to='/doctorlist'>&#60;</Link></span>Making a Booking
           <Datetime onChange={this.handleDate} />
-        </div>
-        <header className="App-bdy">
-          <div>Doctor's Info: </div>
-          <div>Doctor's Name: {doctor.name}</div>
-          <div>Doctor's speciality: {doctor.speciality}</div>
-          <div>Doctor's Education: {doctor.education}</div>
-          <br />
-          <div>Appointment Time: {this.date()}</div>
-          <form>
-            <label for="username">Name of Patient: </label>
-            <input value={user} />
-          </form>
-          <button className='input' onClick={this.handleSubmit}>Book Appointment</button>
         </header>
+        <button className='btn-booking login-btn form-login' onClick={this.handleSubmit}>Book Appointment</button>
+        <div className='doc-details'>
+          <div className='doc-name'>{doctor.name}</div>
+          <div className='spec'>{doctor.speciality}</div>
+          <div className='edu'>{doctor.education}</div>
+          <br />
+          <div className='appt-time'>Appointment Time: {this.date()}</div>
+          <form className='booking-form'>
+            <label className='patient' for="username">Name of Patient: </label>
+            <input value={user} className='doc-input'/>
+          </form>
+        </div>
       </div>
     );
   }

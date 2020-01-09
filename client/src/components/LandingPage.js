@@ -16,7 +16,7 @@ class LandingPage extends React.Component {
         <div className="headTitle">
           <span className='lessThan'><Link to='/'>&#60;</Link></span>Doctors
         </div>
-        <div className="App-body">
+        <div className="App-body text">
           <input
             type="text"
             className="homepg-input"
