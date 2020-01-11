@@ -1,6 +1,7 @@
 import React from "react";
 import "../components/App.css";
 import { connect } from "react-redux";
+import { Link } from 'react-router-dom';
 
 
 const mapStateToProps = state => {
@@ -27,10 +28,10 @@ class BookedList extends React.Component {
 
   renderAppointments() {
     return this.state.appointments.map(appointment => (
-      <div className='setBorder'>
-        <h2>Time:{appointment.date}</h2>
-        <h4>Doctor To Meet:{appointment.doctor_name}</h4>
-        <h4>Patient: {appointment.user_name}</h4>
+      <div className='doctorlist'>
+        <h4>Doctor To Meet: {appointment.doctor_name}</h4>
+        <h4>Name of Patient: {appointment.user_name}</h4>
+        <h5>Time of Appointment: {appointment.date}</h5>
       </div>
     ))
   }
@@ -38,16 +39,35 @@ class BookedList extends React.Component {
   render() {
     return (
       <div className="App">
-        <div className="headTitle">
-          <span>&#60;</span> List Of Booked Appointments
+        <div className="headTitle-booked">
+          <span className='lessThan booked'><Link to='/bookingPage'>&#60;</Link></span>Booked Appointments
         </div>
-        <header className="App-bdy">
-          <div>list of Appointments</div>
-          <div className='setBorder'>{this.renderAppointments()}</div>
-        </header>
+        <div>
+          <div className='doctorlist'>{this.renderAppointments()}</div>
+        </div>
+        <div className='footer'>
+        <ul>
+          <li>
+            <i className="material-icons home"><Link to='/home'>home</Link></i>
+          </li>
+          <li>
+            <i className="material-icons">description</i>
+          </li>
+          <li>
+            <i className="material-icons">forum</i>
+          </li>
+          <li>
+            <i className="material-icons">notifications</i>
+          </li>
+        </ul>
+      </div>
       </div>
     );
   }
+};
+
+BookedList.propTypes = {
+  data: PropTypes.object.isRequired,
 };
 
 export default connect(mapStateToProps, null)(BookedList);

@@ -2,6 +2,7 @@ import React from "react";
 import "../components/App.css";
 import Datetime from 'react-datetime';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import moment from 'moment'
 import { setDate } from '../actions/fetchAction'
 import axios from 'axios';
@@ -42,7 +43,6 @@ class BookingPage extends React.Component {
 
     const { user, userId, doctorId, date } = this.props
     const { doctor } = this.state
-    console.log(user, userId, doctorId, date, doctor)
 
     await axios.post('api/appointments/', {
       date: date,
@@ -102,5 +102,16 @@ class BookingPage extends React.Component {
   }
 };
 
+BookingPage.propTypes = {
+  setDate: PropTypes.func.isRequired,
+  user: PropTypes.string.isRequired,
+  userId: PropTypes.numberisRequired,
+  doctors: PropTypes.object.isRequired,
+  doctorId: PropTypes.number.isRequired,
+  date: PropTypes.string.isRequired,
+};
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(BookingPage);
+
+

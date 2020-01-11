@@ -6,6 +6,7 @@ import axios from 'axios';
 import { createUser } from '../actions/fetchAction'
 import { Button } from 'react-bootstrap';
 
+
 const mapDispatchToProps = dispatch => ({
   createUser: (user) => dispatch(createUser(user)),
 });
@@ -86,5 +87,10 @@ class SignInPage extends React.Component {
     );
   };
 };
+
+SignInPage.propTypes = {
+  createUser: PropTypes.func.isRequired,
+};
+
 
 export default connect(null, mapDispatchToProps)(SignInPage);

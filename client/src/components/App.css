@@ -27,6 +27,12 @@ Button {
   border: 5px solid transparent;
   box-shadow: 2px 4px 8px rgba(172,163,163,.466);
 }
+
+.home a ,
+.desc a {
+  color: black;
+}
+
 /* ******************************
 SignInPage.js
 ****************************** */
@@ -173,27 +179,6 @@ li {
   top:87.5%;
 }
 
-@media only screen and (min-width: 258px) and (max-width: 320px) {
-  .App-body{
-    height: 49vh;
-  }
-
-  .cat {
-    font-size: 10px;
-  }
-
-  li {
-    margin-right: 28px;
-    padding-top: 6px;
-  }
-
-  .headTitle {
-    padding: 40px 4px 30px;
-  }
-}
-
-
-
 /* ******************************
 DoctorList.js
 ****************************** */
@@ -313,18 +298,51 @@ BookingPage.js
   font-style: italic;
   font-weight: 200;
 }
+
+
 /* ******************************
 BookedList.js
 ****************************** */
-.setBorder {
-  border: 1px solid grey;
-  color: black;
+.booked a {
+  color: #fff;
+  margin-right: 30px;
+}
+
+.headTitle-booked {
+  background-color: #009688;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  color: #fff;
+  font-size: 20px;
+  height: 180px;
+  padding: 55px ;
+  text-align: left;
+  width: 100%;
 }
 
 
 /* ******************************
 Media Query
 ****************************** */
+@media only screen and (min-width: 258px) and (max-width: 320px) {
+  .App-body{
+    height: 49vh;
+  }
+
+  .cat {
+    font-size: 10px;
+  }
+
+  li {
+    margin-right: 28px;
+    padding-top: 6px;
+  }
+
+  .headTitle {
+    padding: 40px 4px 30px;
+  }
+}
+
 @media only screen and (min-width: 289px) and (max-width: 470px) {
   .App-body{
     height: 45vh;

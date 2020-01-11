@@ -1,6 +1,7 @@
 import React from "react";
 import "../components/App.css";
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { fetchDoctor } from '../actions/fetchAction'
 import { setDoctorId } from '../actions/fetchAction'
 import { Link } from 'react-router-dom';
@@ -69,36 +70,43 @@ class DoctorList extends React.Component {
   render() {
   return (
     <div className="App">
-        <div className="headTitle">
-          <span className='lessThan'><Link to='/home'>&#60;</Link></span>General Doctor <span>&#x25bc;</span>
+      <div className="headTitle">
+        <span className='lessThan'><Link to='/home'>&#60;</Link></span>General Doctor <span>&#x25bc;</span>
+      </div>
+      <div>
+        <h6 className='list-doc'>List of Doctors from search</h6>
+        <h6 className='filter'>Filter By Category: <input type='text' className='doc-input'/></h6>
+        <div className="doctor">
+          <div>{this.renderDoctors()}</div>
         </div>
-        <div>
-          <h6 className='list-doc'>List of Doctors from search</h6>
-          <h6 className='filter'>Filter By Category: <input type='text' className='doc-input'/></h6>
-          <div className="doctor">
-            <div>{this.renderDoctors()}</div>
-          </div>
-        </div>
+      </div>
       <div className='footer'>
-          <ul>
-            <li>
-              <i className="material-icons">home</i>
-            </li>
-            <li>
-              <i className="material-icons">description</i>
-            </li>
-            <li>
-              <i className="material-icons">forum</i>
-            </li>
-            <li>
-              <i className="material-icons">notifications</i>
-            </li>
-          </ul>
-        </div>
+        <ul>
+          <li>
+          <i className="material-icons home"><Link to='/home'>home</Link></i>
+          </li>
+          <li>
+            <i className="material-icons"><Link to='/bookedlist'>description</Link></i>
+          </li>
+          <li>
+            <i className="material-icons">forum</i>
+          </li>
+          <li>
+            <i className="material-icons">notifications</i>
+          </li>
+        </ul>
+      </div>
 
     </div>
   );
   };
 };
+
+DoctorList.propTypes = {
+  setDoctorId: PropTypes.func.isRequired,
+  fetchDoctor: PropTypes.func.isRequired,
+  doctors: PropTypes.object.isRequired,
+};
+
 
 export default connect(null, mapDispatchToProps)(DoctorList);

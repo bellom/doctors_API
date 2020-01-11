@@ -68,16 +68,15 @@ class LandingPage extends React.Component {
             <Button className='cat' onClick={this.goto}>Abecos</Button>
           </div>
           <br />
-          {/* <span>copyright @bellom 2020</span> */}
 
         </div>
         <div className='footer'>
           <ul>
             <li>
-              <i className="material-icons">home</i>
+              <i className="material-icons home"><Link to='/home'>home</Link></i>
             </li>
-            <li>
-              <i className="material-icons">description</i>
+              <li>
+              <i className="material-icons desc"><Link to='/bookedlist'>description</Link></i>
             </li>
             <li>
               <i className="material-icons">forum</i>
@@ -91,5 +90,6 @@ class LandingPage extends React.Component {
     );
   }
 }
+
 
 export default LandingPage;
