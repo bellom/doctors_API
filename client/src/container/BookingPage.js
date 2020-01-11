@@ -105,7 +105,7 @@ class BookingPage extends React.Component {
 BookingPage.propTypes = {
   setDate: PropTypes.func.isRequired,
   user: PropTypes.string.isRequired,
-  userId: PropTypes.numberisRequired,
+  userId: PropTypes.number.isRequired,
   doctors: PropTypes.object.isRequired,
   doctorId: PropTypes.number.isRequired,
   date: PropTypes.string.isRequired,

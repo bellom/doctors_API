@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 import LandingPage from './LandingPage';
 import SignInPage from '../container/SignInPage';
-import SignUpPage from "./SignUpPage";
 import DoctorList from '../container/DoctorList';
 import BookingPage from "../container/BookingPage";
 import BookedList from "../container/BookedList";
@@ -17,7 +16,6 @@ class App extends React.Component {
           <Route path='/' exact component={SignInPage} />
           <Route path='/home' exact component={LandingPage} />
           <Route path='/signin' component={SignInPage} />
-          <Route path='/signup' component={SignUpPage} />
           <Route path='/doctorlist' exact component={DoctorList} />
           <Route path='/bookingPage' component={BookingPage} />
           <Route path='/bookedList' component={BookedList} />

@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../logo.svg";
 import "../components/App.css";
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import { createUser } from '../actions/fetchAction'
