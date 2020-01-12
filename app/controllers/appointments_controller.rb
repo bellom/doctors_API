@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+
 class AppointmentsController < ApplicationController
   before_action :set_appointment, only: [:show, :update, :destroy]
 
@@ -18,7 +21,7 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.new(appointment_params)
 
     if @appointment.save
-      render json: @appointment, status: :created, location: @appointment
+      render json: @appointment, status: :ok, location: @appointment
     else
       render json: @appointment.errors, status: :unprocessable_entity
     end
