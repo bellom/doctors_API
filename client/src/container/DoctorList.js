@@ -86,7 +86,7 @@ class DoctorList extends React.Component {
           <i className="material-icons home"><Link to='/home'>home</Link></i>
           </li>
           <li>
-            <i className="material-icons"><Link to='/bookedlist'>description</Link></i>
+            <i className="material-icons desc"><Link to='/bookedlist'>description</Link></i>
           </li>
           <li>
             <i className="material-icons">forum</i>
