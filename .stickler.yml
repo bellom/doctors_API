@@ -5,4 +5,4 @@ linters:
     config: "./.eslintrc.json"
 files:
   ignore:
-    - 'client/src/*'
+    # - 'client/src/*'
