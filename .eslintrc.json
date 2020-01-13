@@ -12,10 +12,25 @@
       "sourceType": "module"
     },
     "extends": ["airbnb", "plugin:react/recommended"],
-    "plugins": ["react"],
+    "plugins": ["react", "prettier"],
     "rules": {
       "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
       "import/no-unresolved": "off",
-      "no-shadow": "off"
+      "no-shadow": "off",
+      "jsx-a11y/label-has-associated-control": "off",
+      "jsx-a11y/label-has-for": "off",
+      "eslint-disable camelcase": "off",
+      "react/require-default-props": "off",
+      "radix": "off",
+      "react/prop-types": "off",
+      "import/no-named-as-default": 0,
+      "no-confusing-arrow": "off",
+      "implicit-arrow-linebreak": "off",
+      "react/no-unescaped-entities": "off",
+      "arrow-parens": "off",
+      "forbid-prop-types": "off",
+      "react/forbid-prop-types": "off",
+      "import/prefer-default-export": "off",
+      "camelcase": "off"
     }
   }
