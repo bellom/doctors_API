@@ -1,20 +1,22 @@
 import React from "react";
 import logo from "../logo.svg";
 import "./App.css";
-import { Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
+import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 class LandingPage extends React.Component {
-
   goto = () => {
-    this.props.history.push('/doctorlist')
-  }
+    this.props.history.push("/doctorlist");
+  };
 
   render() {
     return (
       <div className="App">
         <div className="headTitle">
-          <span className='lessThan'><Link to='/'>&#60;</Link></span>Doctors
+          <span className="lessThan">
+            <Link to="/">&#60;</Link>
+          </span>
+          Doctors
         </div>
         <div className="App-body text">
           <input
@@ -31,52 +33,91 @@ class LandingPage extends React.Component {
           <br />
           <span>Go ahead and book an appointment.</span>
         </div>
-        <div className='doc-grid'>
-          <div className='flex'>
-            <Button className='cat' onClick={this.goto}>General Doctor</Button>
-            <Button className='cat' onClick={this.goto}>Child Care</Button>
-            <Button className='cat' onClick={this.goto}>Skin</Button>
+        <div className="doc-grid">
+          <div className="flex">
+            <Button className="cat" onClick={this.goto}>
+              General Doctor
+            </Button>
+            <Button className="cat" onClick={this.goto}>
+              Child Care
+            </Button>
+            <Button className="cat" onClick={this.goto}>
+              Skin
+            </Button>
           </div>
           <br />
-          <div className='flex'>
-            <Button className='cat' onClick={this.goto}>Family Physician</Button>
-            <Button className='cat' onClick={this.goto}>Mental Health</Button>
-            <Button className='cat' onClick={this.goto}>Dentist</Button>
+          <div className="flex">
+            <Button className="cat" onClick={this.goto}>
+              Family Physician
+            </Button>
+            <Button className="cat" onClick={this.goto}>
+              Mental Health
+            </Button>
+            <Button className="cat" onClick={this.goto}>
+              Dentist
+            </Button>
           </div>
           <br />
-          <div className='flex'>
-            <Button className='cat' onClick={this.goto}>Cardiac</Button>
-            <Button className='cat' onClick={this.goto}>Child Care</Button>
-            <Button className='cat' onClick={this.goto}>Skin</Button>
+          <div className="flex">
+            <Button className="cat" onClick={this.goto}>
+              Cardiac
+            </Button>
+            <Button className="cat" onClick={this.goto}>
+              Child Care
+            </Button>
+            <Button className="cat" onClick={this.goto}>
+              Skin
+            </Button>
           </div>
           <br />
-          <div className='flex'>
-            <Button className='cat' onClick={this.goto}>Family Physician</Button>
-            <Button className='cat' onClick={this.goto}>Vent Doctor</Button>
-            <Button className='cat' onClick={this.goto}>Abecos</Button>
+          <div className="flex">
+            <Button className="cat" onClick={this.goto}>
+              Family Physician
+            </Button>
+            <Button className="cat" onClick={this.goto}>
+              Vent Doctor
+            </Button>
+            <Button className="cat" onClick={this.goto}>
+              Abecos
+            </Button>
           </div>
           <br />
-          <div className='flex'>
-            <Button className='cat' onClick={this.goto}>Cardiac</Button>
-            <Button className='cat' onClick={this.goto}>Child Doctor</Button>
-            <Button className='cat' onClick={this.goto}>Artery</Button>
+          <div className="flex">
+            <Button className="cat" onClick={this.goto}>
+              Cardiac
+            </Button>
+            <Button className="cat" onClick={this.goto}>
+              Child Doctor
+            </Button>
+            <Button className="cat" onClick={this.goto}>
+              Artery
+            </Button>
           </div>
           <br />
-          <div className='flex'>
-            <Button className='cat' onClick={this.goto}>Family Physician</Button>
-            <Button className='cat' onClick={this.goto}>Vent Doctor</Button>
-            <Button className='cat' onClick={this.goto}>Abecos</Button>
+          <div className="flex">
+            <Button className="cat" onClick={this.goto}>
+              Family Physician
+            </Button>
+            <Button className="cat" onClick={this.goto}>
+              Vent Doctor
+            </Button>
+            <Button className="cat" onClick={this.goto}>
+              Abecos
+            </Button>
           </div>
           <br />
-
         </div>
-        <div className='footer'>
+        <div className="footer">
           <ul>
             <li>
-              <i className="material-icons home"><Link to='/home'>home</Link></i>
+              <i className="material-icons home">
+                <Link to="/home">home</Link>
+              </i>
             </li>
-              <li>
-              <i className="material-icons desc"><Link to='/bookedlist'>description</Link></i>
+            <li>
+              <i className="material-icons desc">
+                <Link to="/bookedlist">description</Link>
+              </i>
             </li>
             <li>
               <i className="material-icons">forum</i>
@@ -90,6 +131,5 @@ class LandingPage extends React.Component {
     );
   }
 }
-
 
 export default LandingPage;

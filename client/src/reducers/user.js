@@ -1,6 +1,6 @@
 const user = (state = {}, action) => {
   switch (action.type) {
-    case 'CREATE_USER':
+    case "CREATE_USER":
       return action.user;
 
     default:

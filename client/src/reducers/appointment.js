@@ -1,9 +1,9 @@
 const appointment = (state = {}, action) => {
   switch (action.type) {
-    case 'CREATE_APPOINTMENT':
+    case "CREATE_APPOINTMENT":
       return action.appointment;
 
-    case 'FETCH_APPOINTMENT':
+    case "FETCH_APPOINTMENT":
       return action.appointment;
 
     default:
