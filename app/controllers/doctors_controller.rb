@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+
 class DoctorsController < ApplicationController
   before_action :set_doctor, only: [:show, :update, :destroy]
 
