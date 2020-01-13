@@ -25,6 +25,7 @@
       "react/prop-types": "off",
       "import/no-named-as-default": 0,
       "no-confusing-arrow": "off",
+      "arrow-body-style": ["error", "never"],
       "implicit-arrow-linebreak": "off",
       "react/no-unescaped-entities": "off",
       "arrow-parens": "off",
