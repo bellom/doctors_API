@@ -1,8 +1,8 @@
-import React from "react";
-import "../components/App.css";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import React from 'react';
+import '../components/App.css';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const mapStateToProps = state => {
   return {
@@ -17,7 +17,7 @@ class BookedList extends React.Component {
 
   componentDidMount() {
     setTimeout(() => {
-      fetch("/api/appointments")
+      fetch('/api/appointments')
         .then(res => res.json())
         .then(json => this.setState({ appointments: json }))
         .catch(error => console.log(error));

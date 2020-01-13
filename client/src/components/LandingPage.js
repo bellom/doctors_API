@@ -1,12 +1,12 @@
-import React from "react";
-import logo from "../logo.svg";
-import "./App.css";
-import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import React from 'react';
+import logo from '../logo.svg';
+import './App.css';
+import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 class LandingPage extends React.Component {
   goto = () => {
-    this.props.history.push("/doctorlist");
+    this.props.history.push('/doctorlist');
   };
 
   render() {

@@ -1,11 +1,11 @@
-import React from "react";
-import logo from "../logo.svg";
-import "../components/App.css";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import axios from "axios";
-import { createUser } from "../actions/fetchAction";
-import { Button } from "react-bootstrap";
+import React from 'react';
+import logo from '../logo.svg';
+import '../components/App.css';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import axios from 'axios';
+import { createUser } from '../actions/fetchAction';
+import { Button } from 'react-bootstrap';
 
 const mapDispatchToProps = dispatch => ({
   createUser: user => dispatch(createUser(user))
@@ -13,13 +13,13 @@ const mapDispatchToProps = dispatch => ({
 
 class SignInPage extends React.Component {
   state = {
-    username: ""
+    username: ''
   };
 
   addUserToDB = async () => {
     const { createUser } = this.props;
     const res = await axios
-      .post("/api/users/", { username: this.state.username })
+      .post('/api/users/', { username: this.state.username })
       .catch(err => console.log(err));
     const user = res.data;
     createUser(user);
@@ -27,13 +27,13 @@ class SignInPage extends React.Component {
 
   checkUser = async () => {
     const { createUser } = this.props;
-    const user = await fetch("/api/users/")
+    const user = await fetch('/api/users/')
       .then(res => res.json())
       .then(json => json.find(user => user.username === this.state.username))
       .catch(err => console.log(err));
     if (user) {
       createUser(user);
-      this.props.history.push("/home");
+      this.props.history.push('/home');
       return;
     } else {
       this.addUserToDB();
@@ -49,7 +49,7 @@ class SignInPage extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     this.checkUser();
-    this.props.history.push("/home");
+    this.props.history.push('/home');
   };
 
   render() {

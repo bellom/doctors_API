@@ -1,10 +1,10 @@
-import React from "react";
-import "../components/App.css";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-import { fetchDoctor } from "../actions/fetchAction";
-import { setDoctorId } from "../actions/fetchAction";
-import { Link } from "react-router-dom";
+import React from 'react';
+import '../components/App.css';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { fetchDoctor } from '../actions/fetchAction';
+import { setDoctorId } from '../actions/fetchAction';
+import { Link } from 'react-router-dom';
 
 const mapDispatchToProps = dispatch => ({
   fetchDoctor: doctors => dispatch(fetchDoctor(doctors)),
@@ -21,20 +21,20 @@ class DoctorList extends React.Component {
     const id = Number(e.target.id.slice(3));
     const { setDoctorId } = this.props;
     setDoctorId(id);
-    this.props.history.push("/bookingPage");
+    this.props.history.push('/bookingPage');
   };
 
   handleClick = e => {
     e.preventDefault();
     const id = e.target.id;
     document.getElementById(`show${id}`).style.display =
-      document.getElementById(`show${id}`).style.display === "block"
-        ? "none"
-        : "block";
+      document.getElementById(`show${id}`).style.display === 'block'
+        ? 'none'
+        : 'block';
   };
 
   async componentDidMount() {
-    await fetch("/api/doctors")
+    await fetch('/api/doctors')
       .then(response => response.json())
       .then(json => this.setState({ doctors: json }))
       .catch(error => console.log(error));
@@ -60,7 +60,7 @@ class DoctorList extends React.Component {
           </div>
         </div>
         <span className="filter">Click Doctor's Name for more info!</span>
-        <div id={`show${doctor.id}`} style={{ display: "none" }}>
+        <div id={`show${doctor.id}`} style={{ display: 'none' }}>
           <h5>{doctor.education}</h5>
           <h6>{doctor.speciality}</h6>
           <div className="btn-appt">
