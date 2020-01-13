@@ -8,12 +8,12 @@ import { Link } from 'react-router-dom';
 
 const mapDispatchToProps = dispatch => ({
   fetchDoctor: doctors => dispatch(fetchDoctor(doctors)),
-  setDoctorId: id => dispatch(setDoctorId(id))
+  setDoctorId: id => dispatch(setDoctorId(id)),
 });
 
 class DoctorList extends React.Component {
   state = {
-    doctors: []
+    doctors: [],
   };
 
   handleSubmit = e => {
@@ -131,7 +131,7 @@ class DoctorList extends React.Component {
 DoctorList.propTypes = {
   setDoctorId: PropTypes.func.isRequired,
   fetchDoctor: PropTypes.func.isRequired,
-  doctors: PropTypes.object.isRequired
+  doctors: PropTypes.object.isRequired,
 };
 
 export default connect(null, mapDispatchToProps)(DoctorList);

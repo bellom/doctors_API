@@ -1,41 +1,41 @@
 export const createUser = user => {
   return {
     type: 'CREATE_USER',
-    user
+    user,
   };
 };
 
 export const fetchDoctor = doctors => {
   return {
     type: 'FETCH_DOCTOR',
-    doctors
+    doctors,
   };
 };
 
 export const setDoctorId = id => {
   return {
     type: 'SET_DOCTORID',
-    id
+    id,
   };
 };
 
 export const createAppointment = appointment => {
   return {
     type: 'CREATE_APPOINTMENT',
-    appointment
+    appointment,
   };
 };
 
 export const fetchAppointment = appointment => {
   return {
     type: 'FETCH_APPOINTMENT',
-    appointment
+    appointment,
   };
 };
 
 export const setDate = date => {
   return {
     type: 'SET_DATE',
-    date
+    date,
   };
 };

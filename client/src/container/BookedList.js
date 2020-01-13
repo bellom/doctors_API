@@ -6,13 +6,13 @@ import { Link } from 'react-router-dom';
 
 const mapStateToProps = state => {
   return {
-    data: state
+    data: state,
   };
 };
 
 class BookedList extends React.Component {
   state = {
-    appointments: []
+    appointments: [],
   };
 
   componentDidMount() {
@@ -70,7 +70,7 @@ class BookedList extends React.Component {
 }
 
 BookedList.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
 };
 
 export default connect(mapStateToProps, null)(BookedList);

@@ -8,12 +8,12 @@ import { createUser } from '../actions/fetchAction';
 import { Button } from 'react-bootstrap';
 
 const mapDispatchToProps = dispatch => ({
-  createUser: user => dispatch(createUser(user))
+  createUser: user => dispatch(createUser(user)),
 });
 
 class SignInPage extends React.Component {
   state = {
-    username: ''
+    username: '',
   };
 
   addUserToDB = async () => {
@@ -42,7 +42,7 @@ class SignInPage extends React.Component {
 
   handleChange = e => {
     this.setState({
-      username: e.target.value
+      username: e.target.value,
     });
   };
 
@@ -95,7 +95,7 @@ class SignInPage extends React.Component {
 }
 
 SignInPage.propTypes = {
-  createUser: PropTypes.func.isRequired
+  createUser: PropTypes.func.isRequired,
 };
 
 export default connect(null, mapDispatchToProps)(SignInPage);

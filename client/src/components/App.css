@@ -3,8 +3,8 @@ General Styles
 ****************************** */
 * {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .App {
@@ -15,20 +15,20 @@ General Styles
   border: 1px solid #bfbfbf;
 }
 
-Link {
+link {
   color: #009688;
 }
 
 .text {
-  font-size: 12px
+  font-size: 12px;
 }
 
-Button {
+button {
   border: 5px solid transparent;
-  box-shadow: 2px 4px 8px rgba(172,163,163,.466);
+  box-shadow: 2px 4px 8px rgba(172, 163, 163, 0.466);
 }
 
-.home a ,
+.home a,
 .desc a {
   color: black;
 }
@@ -71,13 +71,13 @@ SignInPage.js
 .login-btn:hover {
   background-color: #009688;
   border-color: #009688;
-  box-shadow: 2px 4px 8px rgba(172,163,163,.466);
+  box-shadow: 2px 4px 8px rgba(172, 163, 163, 0.466);
 }
 
 .login-input {
   background-color: white;
   border: 5px solid transparent;
-  box-shadow: 2px 4px 8px rgba(172,163,163,.466);
+  box-shadow: 2px 4px 8px rgba(172, 163, 163, 0.466);
 }
 
 /* ******************************
@@ -128,7 +128,7 @@ LandingPage.js
   width: 80%;
   padding: 5px 0 5px 7px;
   border: 5px solid transparent;
-  box-shadow: 2px 4px 8px rgba(172,163,163,.466);
+  box-shadow: 2px 4px 8px rgba(172, 163, 163, 0.466);
 }
 
 .doc-grid {
@@ -140,7 +140,7 @@ LandingPage.js
   justify-content: center;
 }
 
-.cat:hover{
+.cat:hover {
   background-color: #09d3ac;
   border-color: #009688;
 }
@@ -174,9 +174,9 @@ li {
   padding-top: 9px;
 }
 
-.footer	{ 
-  position:fixed; 
-  top:87.5%;
+.footer {
+  position: fixed;
+  top: 87.5%;
 }
 
 /* ******************************
@@ -184,8 +184,8 @@ DoctorList.js
 ****************************** */
 
 .doctorlist {
-  border: 1px solid hsla(0,0%,42%,.144);
-  box-shadow: 4px 8px 16px hsla(0,0%,42%,.144);
+  border: 1px solid hsla(0, 0%, 42%, 0.144);
+  box-shadow: 4px 8px 16px hsla(0, 0%, 42%, 0.144);
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
@@ -197,7 +197,6 @@ DoctorList.js
 
 .list-doc {
   color: #009688;
-
 }
 
 .filter {
@@ -205,16 +204,16 @@ DoctorList.js
   font-size: 13px;
 }
 
-.list-doc, 
+.list-doc,
 .filter {
   margin: 10px 0 15px 15px;
   text-align: left;
 }
 
-.doc-input{
+.doc-input {
   background-color: white;
   border: 5px solid transparent;
-  box-shadow: 2px 4px 8px rgba(172,163,163,.466);
+  box-shadow: 2px 4px 8px rgba(172, 163, 163, 0.466);
   border-radius: 20px;
   width: 50%;
 }
@@ -247,7 +246,6 @@ DoctorList.js
   color: #009688;
   margin-right: 20px;
   border-color: #47b7a7;
-
 }
 
 .btn-book {
@@ -299,7 +297,6 @@ BookingPage.js
   font-weight: 200;
 }
 
-
 /* ******************************
 BookedList.js
 ****************************** */
@@ -315,17 +312,16 @@ BookedList.js
   color: #fff;
   font-size: 20px;
   height: 180px;
-  padding: 55px ;
+  padding: 55px;
   text-align: left;
   width: 100%;
 }
-
 
 /* ******************************
 Media Query
 ****************************** */
 @media only screen and (min-width: 258px) and (max-width: 320px) {
-  .App-body{
+  .App-body {
     height: 49vh;
   }
 
@@ -344,7 +340,7 @@ Media Query
 }
 
 @media only screen and (min-width: 289px) and (max-width: 470px) {
-  .App-body{
+  .App-body {
     height: 45vh;
   }
 
@@ -353,40 +349,37 @@ Media Query
     padding-top: 6px;
   }
   .headTitle-booking {
-    padding: 2px 13px 0px;  
+    padding: 2px 13px 0px;
   }
-} 
+}
 
 @media only screen and (min-width: 289px) and (max-width: 400px) {
-
   li {
     margin-right: 60px;
     padding-top: 6px;
   }
   .headTitle-booking {
-    padding: 2px 13px 0px;  
+    padding: 2px 13px 0px;
   }
-  
-} 
+}
 @media only screen and (min-width: 289px) and (max-width: 335px) {
-
   li {
     margin-right: 50px;
     padding-top: 6px;
   }
   .headTitle-booking {
-    padding: 2px 13px 0px;  
+    padding: 2px 13px 0px;
   }
-} 
+}
 
 @media only screen and (min-width: 259px) and (max-width: 300px) {
   .headTitle-booking {
-    padding: 2px 13px 0px;  
+    padding: 2px 13px 0px;
   }
-} 
+}
 
 @media only screen and (min-width: 330px) and (max-width: 467px) {
   .headTitle-booking {
-    padding: 2px 74px 0px;  
+    padding: 2px 74px 0px;
   }
-} 
+}
