@@ -4,9 +4,9 @@ import Datetime from 'react-datetime';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import { Link } from 'react-router-dom';
 import { setDate } from '../actions/fetchAction';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 
 const mapStateToProps = state => {
   return {
@@ -26,10 +26,9 @@ class BookingPage extends React.Component {
   state = {
     doctor: {},
     date: '',
-    appointment: {},
   };
 
-  componentDidMount(e) {
+  componentDidMount() {
     const { doctors, doctorId } = this.props;
     const doctor = doctors.filter(doctor => doctor.id === doctorId)[0];
     this.setState({
@@ -43,7 +42,7 @@ class BookingPage extends React.Component {
 
     await axios
       .post('api/appointments/', {
-        date: date,
+        date,
         user_id: userId,
         doctor_id: doctorId,
         doctor_name: doctor.name,
@@ -86,6 +85,7 @@ class BookingPage extends React.Component {
           <Datetime onChange={this.handleDate} />
         </header>
         <button
+          type="submit"
           className="btn-booking login-btn form-login"
           onClick={this.handleSubmit}
         >
@@ -96,10 +96,13 @@ class BookingPage extends React.Component {
           <div className="spec">{doctor.speciality}</div>
           <div className="edu">{doctor.education}</div>
           <br />
-          <div className="appt-time">Appointment Time: {this.date()}</div>
+          <div className="appt-time">
+            Appointment Time:
+            {this.date()}
+          </div>
           <form className="booking-form">
-            <label className="patient" for="username">
-              Name of Patient:{' '}
+            <label className="patient">
+              Name of Patient:
             </label>
             <input value={user} className="doc-input" />
           </form>

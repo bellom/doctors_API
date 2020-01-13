@@ -26,10 +26,19 @@ class BookedList extends React.Component {
 
   renderAppointments() {
     return this.state.appointments.map(appointment => (
-      <div className="doctorlist">
-        <h4>Doctor To Meet: {appointment.doctor_name}</h4>
-        <h4>Name of Patient: {appointment.user_name}</h4>
-        <h5>Time of Appointment: {appointment.date}</h5>
+      <div key={appointment.id} className="doctorlist">
+        <h4>
+          Doctor To Meet:
+          {appointment.doctor_name}
+        </h4>
+        <h4>
+          Name of Patient: 
+          {appointment.user_name}
+        </h4>
+        <h5>
+          Time of Appointment: 
+          {appointment.date}
+        </h5>
       </div>
     ));
   }

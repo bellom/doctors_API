@@ -17,6 +17,9 @@
       "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
       "import/no-unresolved": "off",
       "no-shadow": "off",
+      "arrow-body-style": 0,
+      "no-console":0,
+      "react/destructuring-assignment": ["enabled", "never"],
       "jsx-a11y/label-has-associated-control": "off",
       "jsx-a11y/label-has-for": "off",
       "eslint-disable camelcase": "off",
@@ -25,13 +28,16 @@
       "react/prop-types": "off",
       "import/no-named-as-default": 0,
       "no-confusing-arrow": "off",
-      "arrow-body-style": ["error", "never"],
+      "no-unused-prop-types": false,
       "implicit-arrow-linebreak": "off",
       "react/no-unescaped-entities": "off",
       "arrow-parens": "off",
       "forbid-prop-types": "off",
       "react/forbid-prop-types": "off",
       "import/prefer-default-export": "off",
-      "camelcase": "off"
+      "camelcase": "off",
+      "object-curly-newline": ["never"],
+      "no-underscore-dangle": "off",
+      "comma-dangle": ["error", "never"]
     }
   }

@@ -1,11 +1,11 @@
 import React from 'react';
-import logo from '../logo.svg';
 import '../components/App.css';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import axios from 'axios';
-import { createUser } from '../actions/fetchAction';
 import { Button } from 'react-bootstrap';
+import logo from '../logo.svg';
+import { createUser } from '../actions/fetchAction';
 
 const mapDispatchToProps = dispatch => ({
   createUser: user => dispatch(createUser(user)),
@@ -34,7 +34,6 @@ class SignInPage extends React.Component {
     if (user) {
       createUser(user);
       this.props.history.push('/home');
-      return;
     } else {
       this.addUserToDB();
     }
@@ -61,7 +60,8 @@ class SignInPage extends React.Component {
           <img src={logo} className="App-logo1" alt="logo" />
           <br />
           <span>
-            Med<span className="med">Health</span>
+            Med
+            <span className="med">Health</span>
           </span>
         </div>
         <div>
@@ -87,7 +87,8 @@ class SignInPage extends React.Component {
         </div>
 
         <div className="div-three">
-          By continuing you agree to <a href="/">Terms & Conditions</a>
+          By continuing you agree to 
+          <a href="/">Terms & Conditions</a>
         </div>
       </div>
     );

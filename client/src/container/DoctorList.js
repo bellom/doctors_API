@@ -2,9 +2,8 @@ import React from 'react';
 import '../components/App.css';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { fetchDoctor } from '../actions/fetchAction';
-import { setDoctorId } from '../actions/fetchAction';
 import { Link } from 'react-router-dom';
+import { fetchDoctor, setDoctorId } from '../actions/fetchAction';
 
 const mapDispatchToProps = dispatch => ({
   fetchDoctor: doctors => dispatch(fetchDoctor(doctors)),
@@ -15,7 +14,19 @@ class DoctorList extends React.Component {
   state = {
     doctors: [],
   };
-
+  
+  async componentDidMount() {
+    await fetch('/api/doctors')
+    .then(response => response.json())
+    .then(json => this.setState({ doctors: json }))
+    .catch(error => console.log(error));
+    
+    const { doctors } = this.state;
+    const { fetchDoctor } = this.props;
+    
+    fetchDoctor(doctors);
+  }
+  
   handleSubmit = e => {
     e.preventDefault();
     const id = Number(e.target.id.slice(3));
@@ -32,18 +43,6 @@ class DoctorList extends React.Component {
         ? 'none'
         : 'block';
   };
-
-  async componentDidMount() {
-    await fetch('/api/doctors')
-      .then(response => response.json())
-      .then(json => this.setState({ doctors: json }))
-      .catch(error => console.log(error));
-
-    const { doctors } = this.state;
-    const { fetchDoctor } = this.props;
-
-    fetchDoctor(doctors);
-  }
 
   renderDoctors() {
     return this.state.doctors.map(doctor => (
@@ -64,14 +63,14 @@ class DoctorList extends React.Component {
           <h5>{doctor.education}</h5>
           <h6>{doctor.speciality}</h6>
           <div className="btn-appt">
-            <button
+            <button type="submit"
               className="btn-call form-login"
               onClick={this.handleSubmit}
               id={`btn${doctor.id}`}
             >
               Call
             </button>
-            <button
+            <button type="submit"
               className="btn-book login-btn form-login"
               onClick={this.handleSubmit}
               id={`btn${doctor.id}`}
@@ -92,12 +91,14 @@ class DoctorList extends React.Component {
           <span className="lessThan">
             <Link to="/home">&#60;</Link>
           </span>
-          General Doctor <span>&#x25bc;</span>
+          General Doctor 
+          <span>&#x25bc;</span>
         </div>
         <div>
           <h6 className="list-doc">List of Doctors from search</h6>
           <h6 className="filter">
-            Filter By Category: <input type="text" className="doc-input" />
+            Filter By Category: 
+            <input type="text" className="doc-input" />
           </h6>
           <div className="doctor">
             <div>{this.renderDoctors()}</div>

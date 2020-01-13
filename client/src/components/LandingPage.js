@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from '../logo.svg';
-import './App.css';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
+import logo from '../logo.svg';
+import './App.css';
 
 class LandingPage extends React.Component {
   goto = () => {
@@ -27,7 +27,8 @@ class LandingPage extends React.Component {
           <br />
           <br />
           <img src={logo} className="App-logo2" alt="logo" />
-          <br /> <br />
+          <br /> 
+          <br />
           <h2 className="bodyTitle">search doctors</h2>
           <span>Search by directly clicking the doctors category below</span>
           <br />

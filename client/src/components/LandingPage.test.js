@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import LandingPage from './LandingPage';
 import Adapter from 'enzyme-adapter-react-16';
-import { configure } from 'enzyme';
-import { mount } from 'enzyme';
+import { configure, mount } from 'enzyme';
+import LandingPage from './LandingPage';
 
 configure({ adapter: new Adapter() });
 
