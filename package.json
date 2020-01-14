@@ -28,7 +28,6 @@
     "start": "react-scripts start",
     "build": "cd client && npm install && npm build && cd ..",
     "deploy": "cp -a client/build/. public/",
-    "postinstall": "npm build && npm deploy && echo 'Client built!'",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prettier": "prettier --write '**/*.{ts,js,css,html}'"
