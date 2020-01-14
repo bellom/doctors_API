@@ -23,12 +23,17 @@
     "redux-thunk": "^2.3.0",
     "webpack-react": "^0.6.0"
   },
+  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prettier": "prettier --write '**/*.{ts,js,css,html}'"
+  },
+  "engines": {
+    "npm": "6.13.4",
+    "node": "13.4.0"
   },
   "eslintConfig": {
     "extends": "react-app"
