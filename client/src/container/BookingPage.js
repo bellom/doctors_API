@@ -55,10 +55,6 @@ class BookingPage extends React.Component {
     this.setState({
       date: moment(e._d).format('MMMM Do YYYY, h:mm:ss a'),
     });
-    const { date } = this.state;
-    const { setDate } = this.props;
-
-    setDate(date);
   };
 
   handleSubmit = e => {
@@ -69,6 +65,12 @@ class BookingPage extends React.Component {
 
   date() {
     return this.state.date;
+  }
+
+  setDate() {
+    const { date } = this.state;
+    const { setDate } = this.props;
+    setDate(date);
   }
 
   render() {
@@ -82,7 +84,7 @@ class BookingPage extends React.Component {
             <Link to="/doctorlist">&#60;</Link>
           </span>
           Making a Booking
-          <Datetime onChange={this.handleDate} />
+          <Datetime onChange={this.handleDate} onClick={this.setDate()}/>
         </header>
         <button
           type="submit"
