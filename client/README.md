@@ -6,7 +6,7 @@ This is an API service for the capstone project I built to graduate at Microvers
 The design is taken from [here](https://www.behance.net/gallery/77208667/MediCo-Medical-mobile-app-UIUX-design)
 Design credit goes to [Vinisha Panjikar](https://www.behance.net/vinishapanjikar)
 
-[Live Link]()
+[Live Link](https://doctor-appointment-app.herokuapp.com/)
 
 ## Technologies && Tools
 ##### React
@@ -33,13 +33,15 @@ git clone https://github.com/KaushikShivam/doctor_api
 
 3. Run `rails db:create`
 
-4. Run `rails s -p 3001`
+4.   Run `rails db:seed`
 
-5. cd `client` 
+5. Run `rails s -p 3001` or  Run `bin/rake start`
 
-6. Run `npm install`
+6. cd `client` 
 
-7. Run `npm start` (in another termimal)
+7. Run `npm install`
+
+8. Run `npm start` (in another termimal)
 
 ## Contact
 
