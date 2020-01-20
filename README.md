@@ -1,6 +1,6 @@
 ## Description
 
-This is an API service for the capstone project I built to graduate at Microverse. Here are the project [requirements](https://www.notion.so/Final-Capstone-Project-Doctor-appointments-9b345aad940b4f0a951049fcb3da159f) .
+This is an API service for the final capstone project @Microverse, In this mobile app user can book an appointment with the list of doctors provided from the backend. Here are the project [requirements](https://www.notion.so/Final-Capstone-Project-Doctor-appointments-9b345aad940b4f0a951049fcb3da159f).
 
 
 The design is taken from [here](https://www.behance.net/gallery/77208667/MediCo-Medical-mobile-app-UIUX-design)
@@ -26,7 +26,7 @@ Design credit goes to [Vinisha Panjikar](https://www.behance.net/vinishapanjikar
 1. Clone the project to your local directory
 
 ```
-git clone https://github.com/KaushikShivam/doctor_api
+git clone https://github.com/bellom/doctors_API
 ```
 
 2. Run `bundle install`
