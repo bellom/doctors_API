@@ -21,11 +21,11 @@ class BookedList extends React.Component {
       axios
         .get('/api/appointments')
         .then(res => {
-          const appointments = res.data
-          this.setState({ appointments })
+          const appointments = res.data;
+          this.setState({ appointments });
         })
         .catch(error => console.log(error));
-    }, 250);
+    }, 1);
   }
 
   renderAppointments() {
