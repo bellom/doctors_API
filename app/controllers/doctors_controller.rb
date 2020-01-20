@@ -2,7 +2,7 @@
 
 
 class DoctorsController < ApplicationController
-  before_action :set_doctor, only: [:show, :update, :destroy]
+  before_action :set_doctor, only: [:show]
 
   # GET /doctors
   def index
@@ -15,32 +15,6 @@ class DoctorsController < ApplicationController
   def show
     render json: @doctor
   end
-
-  # POST /doctors
-  def create
-    @doctor = Doctor.new(doctor_params)
-
-    if @doctor.save
-      render json: @doctor, status: :created, location: @doctor
-    else
-      render json: @doctor.errors, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /doctors/1
-  def update
-    if @doctor.update(doctor_params)
-      render json: @doctor
-    else
-      render json: @doctor.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /doctors/1
-  def destroy
-    @doctor.destroy
-  end
-
   
   private
     # Use callbacks to share common setup or constraints between actions.

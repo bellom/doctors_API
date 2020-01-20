@@ -8,10 +8,5 @@ Rails.application.routes.draw do
   get '*path', to: "application#fallback_index_html", constraints: ->(request) do
     !request.xhr? && request.format.html?
   end
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
 end
-
-
-  # get '*page', to: 'home#index', constraints: lambda { |req|
-  #   !req.xhr? && req.format.html?
-  # }
