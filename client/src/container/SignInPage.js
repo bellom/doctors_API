@@ -27,11 +27,11 @@ class SignInPage extends React.Component {
 
   checkUser = async () => {
     const { createUser } = this.props;
-    const user = await axios
-      .get('/api/users/')
-      .then(res => {
-        const json = res.data
-        .then(json.find(user => user.username === this.state.username))
+    const user = await axios.get('/api/users/')
+      .then(res => { 
+        const data = res.data
+        const result = data.find(user => user.username === this.state.username)
+        return result
       })
       .catch(err => console.log(err));
     if (user) {

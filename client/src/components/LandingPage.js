@@ -30,7 +30,7 @@ class LandingPage extends React.Component {
           <br /> 
           <br />
           <h2 className="bodyTitle">search doctors</h2>
-          <span>Search by directly clicking the doctors category below</span>
+          <span>Search by directly clicking the doctors speciality below</span>
           <br />
           <span>Go ahead and book an appointment.</span>
         </div>

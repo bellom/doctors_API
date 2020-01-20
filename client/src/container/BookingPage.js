@@ -5,8 +5,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
-import { setDate } from '../actions/fetchAction';
 import axios from 'axios';
+import { setDate } from '../actions/fetchAction';
 
 const mapStateToProps = state => {
   return {
