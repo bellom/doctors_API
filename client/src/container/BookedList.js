@@ -3,6 +3,7 @@ import '../components/App.css';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const mapStateToProps = state => {
   return {
@@ -17,9 +18,12 @@ class BookedList extends React.Component {
 
   componentDidMount() {
     setTimeout(() => {
-      fetch('/api/appointments')
-        .then(res => res.json())
-        .then(json => this.setState({ appointments: json }))
+      axios
+        .get('/api/appointments')
+        .then(res => {
+          const appointments = res.data
+          this.setState({ appointments })
+        })
         .catch(error => console.log(error));
     }, 250);
   }
@@ -32,11 +36,11 @@ class BookedList extends React.Component {
           {appointment.doctor_name}
         </h4>
         <h4>
-          Name of Patient: 
+          Name of Patient:
           {appointment.user_name}
         </h4>
         <h5>
-          Time of Appointment: 
+          Time of Appointment:
           {appointment.date}
         </h5>
       </div>
