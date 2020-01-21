@@ -3,7 +3,7 @@ const specialties = [
     'Child Care',
     'Skin',
     'Family Physician',
-    'Mental',
+    'Mental Health',
     'Dentist'
   ];
   

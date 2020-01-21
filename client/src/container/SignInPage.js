@@ -59,40 +59,41 @@ class SignInPage extends React.Component {
 
     return (
       <div className="App App-login">
-        <div className="Div-one">
+        <header className="Div-one">
           <img src={logo} className="App-logo1" alt="logo" />
           <br />
           <span>
             Med
             <span className="med">Health</span>
           </span>
-        </div>
-        <div>
-          <h2>WELCOME</h2>
-          <span>Sign in to continue</span>
-        </div>
-        <div className="div-two">
-          <form onSubmit={this.handleSubmit}>
-            <input
-              type="text"
-              className="login-input form-login"
-              placeholder="patient name"
-              name="username"
-              value={username}
-              onChange={this.handleChange}
-            />
-            <br />
-            <br />
-            <Button type="submit" className="login-btn form-login">
-              SignIn
-            </Button>
-          </form>
-        </div>
-
-        <div className="div-three">
+        </header>
+        <main>
+          <div>
+            <h2>WELCOME</h2>
+            <span>Sign in to continue</span>
+          </div>
+          <div className="div-two">
+            <form onSubmit={this.handleSubmit}>
+              <input
+                type="text"
+                className="login-input form-login"
+                placeholder="patient name"
+                name="username"
+                value={username}
+                onChange={this.handleChange}
+              />
+              <br />
+              <br />
+              <Button type="submit" className="login-btn form-login">
+                SignIn
+              </Button>
+            </form>
+          </div>
+        </main>
+        <footer className="div-three">
           By continuing you agree to 
           <a href="/">Terms & Conditions</a>
-        </div>
+        </footer>
       </div>
     );
   }

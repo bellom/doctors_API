@@ -35,14 +35,14 @@ class BookedList extends React.Component {
           Doctor To Meet:
           {appointment.doctor_name}
         </h4>
-        <h4>
+        <h5>
           Name of Patient:
           {appointment.user_name}
-        </h4>
-        <h5>
+        </h5>
+        <h6>
           Time of Appointment:
           {appointment.date}
-        </h5>
+        </h6>
       </div>
     ));
   }
@@ -50,16 +50,16 @@ class BookedList extends React.Component {
   render() {
     return (
       <div className="App">
-        <div className="headTitle-booked">
+        <header className="headTitle-booked">
           <span className="lessThan booked">
             <Link to="/bookingPage">&#60;</Link>
           </span>
           Booked Appointments
-        </div>
-        <div>
+        </header>
+        <main>
           <div className="doctorlist">{this.renderAppointments()}</div>
-        </div>
-        <div className="footer">
+        </main>
+        <footer className="footer">
           <ul>
             <li>
               <i className="material-icons home">
@@ -76,7 +76,7 @@ class BookedList extends React.Component {
               <i className="material-icons">notifications</i>
             </li>
           </ul>
-        </div>
+        </footer>
       </div>
     );
   }

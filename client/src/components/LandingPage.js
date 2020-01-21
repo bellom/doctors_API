@@ -12,12 +12,12 @@ class LandingPage extends React.Component {
   render() {
     return (
       <div className="App">
-        <div className="headTitle">
+        <header className="headTitle">
           <span className="lessThan">
             <Link to="/">&#60;</Link>
           </span>
           Doctors
-        </div>
+        </header>
         <div className="App-body text">
           <form className="homepg-form" onSubmit={this.goto}>
             <input
@@ -110,7 +110,7 @@ class LandingPage extends React.Component {
           </div>
           <br />
         </div>
-        <div className="footer">
+        <footer className="footer">
           <ul>
             <li>
               <i className="material-icons home">
@@ -129,7 +129,7 @@ class LandingPage extends React.Component {
               <i className="material-icons">notifications</i>
             </li>
           </ul>
-        </div>
+        </footer>
       </div>
     );
   }

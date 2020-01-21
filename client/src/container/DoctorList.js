@@ -105,14 +105,14 @@ class DoctorList extends React.Component {
   render() {
     return (
       <div className="App">
-        <div className="headTitle">
+        <header className="headTitle">
           <span className="lessThan">
             <Link to="/home">&#60;</Link>
           </span>
           General Doctor
           <span>&#x25bc;</span>
-        </div>
-        <div>
+        </header>
+        <main>
           <h6 className="list-doc">List of Doctors from search</h6>
           <div className="filter">
             Filter By Speciality: 
@@ -128,8 +128,8 @@ class DoctorList extends React.Component {
           <div className="doctor">
             <div>{this.renderDoctors()}</div>
           </div>
-        </div>
-        <div className="footer">
+        </main>
+        <footer className="footer">
           <ul>
             <li>
               <i className="material-icons home">
@@ -148,7 +148,7 @@ class DoctorList extends React.Component {
               <i className="material-icons">notifications</i>
             </li>
           </ul>
-        </div>
+        </footer>
       </div>
     );
   }
