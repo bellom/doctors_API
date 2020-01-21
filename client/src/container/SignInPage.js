@@ -81,6 +81,7 @@ class SignInPage extends React.Component {
                 name="username"
                 value={username}
                 onChange={this.handleChange}
+                required
               />
               <br />
               <br />
