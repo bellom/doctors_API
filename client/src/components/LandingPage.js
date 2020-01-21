@@ -19,11 +19,13 @@ class LandingPage extends React.Component {
           Doctors
         </div>
         <div className="App-body text">
-          <input
-            type="text"
-            className="homepg-input"
-            placeholder="Search for doctors"
-          />
+          <form className="homepg-form" onSubmit={this.goto}>
+            <input
+              type="text" 
+              className="homepg-input"
+              placeholder="Search for doctors speciality"
+            />
+          </form>
           <br />
           <br />
           <img src={logo} className="App-logo2" alt="logo" />

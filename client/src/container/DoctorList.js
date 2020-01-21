@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { fetchDoctor, setDoctorId } from '../actions/fetchAction';
+import specialties from '../components/specialties';
 
 const mapDispatchToProps = dispatch => ({
   fetchDoctor: doctors => dispatch(fetchDoctor(doctors)),
@@ -14,6 +15,7 @@ const mapDispatchToProps = dispatch => ({
 class DoctorList extends React.Component {
   state = {
     doctors: [],
+    filter: 'All'
   };
 
   async componentDidMount() {
@@ -48,8 +50,18 @@ class DoctorList extends React.Component {
         : 'block';
   };
 
+  handleChange = e => {
+    const { value } = e.target;
+    this.setState({ filter: value})
+  }
+
+  filteredDoctor = () => {
+    const { doctors, filter } = this.state;
+    return filter === 'All' ? doctors : doctors.filter(doctor => doctor.speciality === filter);
+  }
+  
   renderDoctors() {
-    return this.state.doctors.map(doctor => (
+    return this.filteredDoctor().map(doctor => (
       <div key={doctor.id} className="doctorlist">
         <div className="doc-div">
           <div className="doc-img">
@@ -102,10 +114,17 @@ class DoctorList extends React.Component {
         </div>
         <div>
           <h6 className="list-doc">List of Doctors from search</h6>
-          <h6 className="filter">
-            Filter By Category:
-            <input type="text" className="doc-input" />
-          </h6>
+          <div className="filter">
+            Filter By Speciality: 
+            <select className="doc-input" onChange={this.handleChange}>
+              <option value="All">All</option>
+              {specialties.map(e => (
+                <option key={e} value={e}>
+                  {e}
+                </option>
+              ))}
+            </select>
+          </div>
           <div className="doctor">
             <div>{this.renderDoctors()}</div>
           </div>

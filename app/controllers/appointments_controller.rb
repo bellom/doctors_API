@@ -11,11 +11,6 @@ class AppointmentsController < ApplicationController
     render json: @appointments
   end
 
-  # GET /appointments/1
-  def show
-    render json: @appointment
-  end
-
   # POST /appointments
   def create
     @appointment = Appointment.new(appointment_params)
