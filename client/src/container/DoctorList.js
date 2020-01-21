@@ -82,7 +82,6 @@ class DoctorList extends React.Component {
             <button
               type="submit"
               className="btn-call form-login"
-              onClick={this.handleSubmit}
               id={`btn${doctor.id}`}
             >
               Call
