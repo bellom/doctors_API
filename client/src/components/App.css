@@ -1,0 +1,390 @@
+/* ******************************
+General Styles
+****************************** */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 30px;
+  border: 1px solid #bfbfbf;
+}
+
+link {
+  color: #009688;
+}
+
+.text {
+  font-size: 12px;
+}
+
+button {
+  border: 5px solid transparent;
+  box-shadow: 2px 4px 8px rgba(172, 163, 163, 0.466);
+}
+
+.home a,
+.desc a {
+  color: black;
+}
+
+/* ******************************
+SignInPage.js
+****************************** */
+.App-login {
+  background-color: #e0fdf7;
+  height: 100vh;
+}
+
+.App-logo1 {
+  height: 15vmin;
+}
+
+.Div-one {
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+.med {
+  color: #009688;
+}
+
+.div-two {
+  padding-top: 50px;
+  padding-bottom: 220px;
+  margin: 0 35px 0 35px;
+}
+
+.form-login {
+  border-radius: 20px;
+  height: 5vh;
+  padding: 0 0 5px 5px;
+  width: 100%;
+}
+
+.login-btn,
+.login-btn:hover {
+  background-color: #009688;
+  border-color: #009688;
+  box-shadow: 2px 4px 8px rgba(172, 163, 163, 0.466);
+}
+
+.login-input {
+  background-color: white;
+  border: 5px solid transparent;
+  box-shadow: 2px 4px 8px rgba(172, 163, 163, 0.466);
+}
+
+/* ******************************
+LandingPage.js
+****************************** */
+
+.App-body {
+  align-items: center;
+  background-color: white;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 13.3vh;
+  height: 42vh;
+}
+
+.lessThan a {
+  color: #009688;
+  font-size: 30px;
+  margin-right: 40px;
+  text-decoration: none;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.headTitle {
+  background-color: rgb(224, 253, 247);
+  color: #009688;
+  font-size: 23px;
+  min-height: 10vh;
+  padding: 40px 45px 30px;
+  text-align: left;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.bodyTitle {
+  text-transform: uppercase;
+  color: black;
+}
+
+.homepg-form,
+.homepg-input {
+  width: 80%;
+}
+
+.homepg-input {
+  border-radius: 25px;
+  height: 40px;
+  padding: 5px 0 5px 7px;
+  border: 5px solid transparent;
+  box-shadow: 2px 4px 8px rgba(172, 163, 163, 0.466);
+}
+
+.doc-grid {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.cat:hover {
+  background-color: #09d3ac;
+  border-color: #009688;
+}
+
+.cat {
+  background-color: rgb(224, 253, 247);
+  border: 1px solid grey;
+  color: #009688;
+  height: 9vh;
+  margin-right: 5px;
+  width: 30%;
+}
+
+span {
+  color: black;
+  font-size: 15px;
+}
+
+ul {
+  background-color: white;
+  list-style-type: none;
+  display: flex;
+  height: 35px;
+  margin-top: 60px;
+  width: 100%;
+}
+
+li {
+  margin-right: 100px;
+  justify-content: center;
+  padding-top: 9px;
+}
+
+.footer {
+  position: fixed;
+  top: 87.5%;
+}
+
+/* ******************************
+DoctorList.js
+****************************** */
+
+.doctorlist {
+  border: 1px solid hsla(0, 0%, 42%, 0.144);
+  box-shadow: 4px 8px 16px hsla(0, 0%, 42%, 0.144);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.hideDetails {
+  display: none;
+}
+
+.list-doc {
+  color: #009688;
+}
+
+.filter {
+  color: #bfbfbf;
+  font-size: 13px;
+}
+
+.list-doc,
+.filter {
+  margin: 10px 0 15px 15px;
+  text-align: left;
+}
+
+.doc-input {
+  background-color: white;
+  border: 5px solid transparent;
+  box-shadow: 2px 4px 8px rgba(172, 163, 163, 0.466);
+  border-radius: 20px;
+  margin-left: 10px;
+  width: 50%;
+}
+
+.doc-div {
+  display: flex;
+}
+
+.doc-name {
+  margin-left: 25px;
+  font-size: 30px;
+}
+
+.doc-img img {
+  border-radius: 50%;
+  width: 7rem;
+  height: 6rem;
+}
+
+.btn-call,
+.btn-book {
+  font-size: 15px;
+  font-weight: 700;
+  width: 25%;
+  border: 1px solid transparent;
+}
+
+.btn-call {
+  background-color: #fff;
+  color: #009688;
+  margin-right: 20px;
+  border-color: #47b7a7;
+}
+
+.btn-book {
+  color: #fff;
+}
+/* ******************************
+BookingPage.js
+****************************** */
+.headTitle-booking {
+  background-color: #009688;
+  color: #fff;
+  font-size: 23px;
+  padding: 53px 121px 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  width: 100%;
+}
+
+.booking a {
+  color: #fff;
+}
+
+.btn-booking {
+  color: #fff;
+  margin: 30px 0 20px 0;
+  width: 70%;
+  height: 50px;
+}
+
+.booking-form {
+  margin-bottom: 10px;
+}
+
+.edu,
+.spec {
+  font-variant: small-caps;
+  font-weight: 350;
+}
+
+.patient {
+  margin-right: 5px;
+  font-size: 15px;
+}
+
+.appt-time,
+.patient {
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 200;
+}
+
+/* ******************************
+BookedList.js
+****************************** */
+.booked a {
+  color: #fff;
+  margin-right: 30px;
+}
+
+.headTitle-booked {
+  background-color: #009688;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  color: #fff;
+  font-size: 20px;
+  height: 180px;
+  padding: 55px;
+  text-align: left;
+  width: 100%;
+}
+
+/* ******************************
+Media Query
+****************************** */
+@media only screen and (min-width: 258px) and (max-width: 320px) {
+  .App-body {
+    height: 49vh;
+  }
+
+  .cat {
+    font-size: 10px;
+  }
+
+  li {
+    margin-right: 28px;
+    padding-top: 6px;
+  }
+
+  .headTitle {
+    padding: 40px 4px 30px;
+  }
+}
+
+@media only screen and (min-width: 289px) and (max-width: 470px) {
+  .App-body {
+    height: 45vh;
+  }
+
+  li {
+    margin-right: 80px;
+    padding-top: 6px;
+  }
+  .headTitle-booking {
+    padding: 2px 13px 0px;
+  }
+}
+
+@media only screen and (min-width: 289px) and (max-width: 400px) {
+  li {
+    margin-right: 60px;
+    padding-top: 6px;
+  }
+  .headTitle-booking {
+    padding: 2px 13px 0px;
+  }
+}
+@media only screen and (min-width: 289px) and (max-width: 335px) {
+  li {
+    margin-right: 50px;
+    padding-top: 6px;
+  }
+  .headTitle-booking {
+    padding: 2px 13px 0px;
+  }
+}
+
+@media only screen and (min-width: 259px) and (max-width: 300px) {
+  .headTitle-booking {
+    padding: 2px 13px 0px;
+  }
+}
+
+@media only screen and (min-width: 330px) and (max-width: 467px) {
+  .headTitle-booking {
+    padding: 2px 74px 0px;
+  }
+}
