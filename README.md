@@ -8,7 +8,7 @@ Design credit goes to [Vinisha Panjikar](https://www.behance.net/vinishapanjikar
 
 [Live Link](https://doctor-appointment-app.herokuapp.com/)
 
-## Technologies && Tools
+## Technologies & Tools
 ##### React
 ##### Redux
 ##### Rails
