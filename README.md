@@ -6,9 +6,12 @@ This is an API service for the final capstone project @Microverse, In this mobil
 The design is taken from [here](https://www.behance.net/gallery/77208667/MediCo-Medical-mobile-app-UIUX-design)
 Design credit goes to [Vinisha Panjikar](https://www.behance.net/vinishapanjikar)
 
+<img width="718" alt="doc-app" src="https://user-images.githubusercontent.com/31897434/74181082-e9105100-4c40-11ea-88ee-d06948ee3d9d.png">
+
+
 [Live Link](https://doctor-appointment-app.herokuapp.com/)
 
-## Technologies && Tools
+## Technologies & Tools
 ##### React
 ##### Redux
 ##### Rails
